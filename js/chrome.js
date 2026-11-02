@@ -4,8 +4,8 @@
 
   document.write(`
   <header class="header">
-    <a class="brand" href="index.html" aria-label="Cassator Corp.">
-      <img src="assets/logo.svg" alt="Cassator Corp.">
+    <a class="brand" href="index.html" aria-label="EraX Digital">
+      <img src="assets/logo.svg" alt="EraX Digital">
     </a>
     <nav class="nav" aria-label="Primary">
       <div class="drop" id="sl8drop">
@@ -46,8 +46,8 @@
       <div class="wrap">
         <p class="footer-quote">People are the most valuable asset on the planet. We are building infrastructure that empowers people to turn their potential into digital assets.</p>
         <div class="mails">
-          <a href="mailto:hello@cassator.corp">hello@cassator.corp</a>
-          <a href="mailto:press@cassator.corp">press@cassator.corp</a>
+          <a href="mailto:hello@erax.digital">hello@erax.digital</a>
+          <a href="mailto:press@erax.digital">press@erax.digital</a>
         </div>
         <div class="stores">
           <a href="https://apps.apple.com/ua/app/sl8-social-platform/id1540326210" target="_blank" rel="noopener">App Store</a>
@@ -94,9 +94,9 @@
             </div>
           </div>
         </div>
-        <p class="legal">Cassator Corp is registered in the State of Delaware, USA. SEC filings: Regulation CF / Regulation D. Cassator Corp is not a licensed financial institution. Investments in tokens and digital assets carry high risk. Past results do not guarantee future results. This website is for informational purposes only and does not constitute a public offer or investment recommendation.</p>
+        <p class="legal">EraX Digital is registered in the State of Delaware, USA. SEC filings: Regulation CF / Regulation D. EraX Digital is not a licensed financial institution. Investments in tokens and digital assets carry high risk. Past results do not guarantee future results. This website is for informational purposes only and does not constitute a public offer or investment recommendation.</p>
         <div class="legal-row">
-          <span>© 2026 Cassator Corp.</span>
+          <span>© 2026 EraX Digital</span>
           <span>All rights reserved. Delaware, United States.</span>
         </div>
       </div>

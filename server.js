@@ -65,5 +65,5 @@ http.createServer((req, res) => {
     res.end(data);
   });
 }).listen(8080, "127.0.0.1", () => {
-  console.log("Cassator clone at http://127.0.0.1:8080");
+  console.log("EraX Digital clone at http://127.0.0.1:8080");
 });
