@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const a = html.indexOf('class="nav_link">SL8');
+const b = html.indexOf("Trust Center", a);
+console.log(html.slice(a, b + 80).replace(/<[^>]+>/g, " | ").replace(/\s+/g, " ").slice(0, 1500));
+console.log("---TITLES---");
+const t = html.match(/<title>[^<]+<\/title>/);
+const d = html.match(/name="description" content="[^"]+"/);
+const og = [...html.matchAll(/property="og:[^"]+" content="[^"]+"/g)].map(m => m[0]);
+console.log(t && t[0]);
+console.log(d && d[0]);
+console.log(og.slice(0, 8).join("\n"));

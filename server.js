@@ -6,7 +6,7 @@ const root = __dirname;
 
 // The original scripts skip pointer effects when the browser reports
 // prefers-reduced-motion. The embedded preview does that even when a
-// normal visit to cassator.com still runs the hover effects, so the
+// The original site still runs the hover effects, so the
 // phoenix letter field, link glitch, ASCII scatter, card parallax, and
 // CTA tilt never start. Report "no reduced motion" before any page
 // script reads matchMedia. Layout breakpoints are left alone.

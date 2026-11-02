@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const i = html.indexOf(">Paid content<");
+console.log(html.slice(i, i + 400).replace(/<[^>]+>/g, " | "));
+const j = html.indexOf("Over 6 Years");
+console.log("\nYEARS\n", html.slice(j, j + 500).replace(/<[^>]+>/g, " | "));
+const k = html.indexOf("I do not believe");
+console.log("\nQUOTE\n", html.slice(k - 80, k + 200).replace(/<[^>]+>/g, " | "));
+const v = html.indexOf("Short-term Goals");
+console.log("\nVISION\n", html.slice(v, v + 1800).replace(/<[^>]+>/g, "\n").replace(/&amp;/g, "&"));

@@ -9,66 +9,66 @@
     </a>
     <nav class="nav" aria-label="Primary">
       <div class="drop" id="sl8drop">
-        <button class="drop-btn" aria-expanded="false" aria-controls="sl8menu">SL8 <i class="caret"></i></button>
+        <button class="drop-btn" aria-expanded="false" aria-controls="sl8menu">Ecosystem <i class="caret"></i></button>
         <div class="drop-menu" id="sl8menu">
-          <a href="sl8.html"><span>01</span> SL8 — Overview</a>
-          <a href="rwa.html"><span>02</span> RWA Platform</a>
-          <a href="wallet.html"><span>03</span> Wallet &amp; Staking</a>
-          <a href="paid-content.html"><span>04</span> Paid Content</a>
+          <a href="sl8.html"><span>01</span> EraX Social</a>
+          <a href="rwa.html"><span>02</span> EraX Assets</a>
+          <a href="wallet.html"><span>03</span> EraX Wallet</a>
+          <a href="paid-content.html"><span>04</span> EraX Creator</a>
         </div>
       </div>
-      <a class="${active("investors.html")}" href="investors.html">Investors</a>
-      <a class="${active("newsroom.html")}" href="newsroom.html">Newsroom</a>
-      <a class="${active("team.html")}" href="team.html">Team</a>
+      <a class="${active("investors.html")}" href="investors.html">Roadmap</a>
+      <a class="${active("newsroom.html")}" href="newsroom.html">Company</a>
+      <a class="${active("team.html")}" href="team.html">Careers</a>
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
     </nav>
     <div class="header-right">
-      <a class="btn-go" href="https://sl8.online/" target="_blank" rel="noopener">Go to Sl8</a>
+      <a class="btn-go" href="sl8.html">Ecosystem</a>
       <button class="burger" id="burger" aria-label="Open menu"><span></span></button>
     </div>
   </header>
   <div class="mobile-panel" id="mobile">
-    <a href="sl8.html">01 SL8 — Overview</a>
-    <a href="rwa.html">02 RWA Platform</a>
-    <a href="wallet.html">03 Wallet &amp; Staking</a>
-    <a href="paid-content.html">04 Paid Content</a>
-    <a href="investors.html">Investors</a>
-    <a href="newsroom.html">Newsroom</a>
-    <a href="team.html">Team</a>
+    <a href="sl8.html">01 EraX Social</a>
+    <a href="rwa.html">02 EraX Assets</a>
+    <a href="wallet.html">03 EraX Wallet</a>
+    <a href="paid-content.html">04 EraX Creator</a>
+    <a href="investors.html">Roadmap</a>
+    <a href="newsroom.html">Company</a>
+    <a href="team.html">Careers</a>
     <a href="trust-center.html">Trust Center</a>
-    <a href="built-on-stellar.html">Built on Stellar</a>
-    <a href="https://sl8.online/" target="_blank" rel="noopener">Go to Sl8</a>
+    <a href="built-on-stellar.html">Technology</a>
+    <a href="sl8.html">Ecosystem</a>
   </div>`);
 
   window.renderFooter = function () {
     document.write(`
     <footer class="footer">
       <div class="wrap">
-        <p class="footer-quote">People are the most valuable asset on the planet. We are building infrastructure that empowers people to turn their potential into digital assets.</p>
+        <p class="footer-quote">EraX Digital is building the next generation of connected digital experiences by combining social networking, blockchain technology and creator-focused financial tools.</p>
         <div class="mails">
-          <a href="mailto:hello@erax.digital">hello@erax.digital</a>
-          <a href="mailto:press@erax.digital">press@erax.digital</a>
+          <a href="team.html">Careers</a>
+          <a href="newsroom.html">Company</a>
         </div>
         <div class="stores">
-          <a href="https://apps.apple.com/ua/app/sl8-social-platform/id1540326210" target="_blank" rel="noopener">App Store</a>
-          <a href="https://play.google.com/store/apps/details?id=mobile.sl8.app" target="_blank" rel="noopener">Google Play</a>
-          <a href="https://sl8.online/" target="_blank" rel="noopener">Web Version</a>
+          <a href="sl8.html">EraX Social</a>
+          <a href="wallet.html">EraX Wallet</a>
+          <a href="paid-content.html">EraX Creator</a>
         </div>
         <div class="foot-grid">
           <div>
-            <h4>Platform SL8</h4>
-            <a href="sl8.html">SL8 — Overview</a>
-            <a href="rwa.html">RWA Platform</a>
-            <a href="wallet.html">Wallet &amp; Staking</a>
-            <a href="paid-content.html">Paid Content</a>
+            <h4>Ecosystem</h4>
+            <a href="sl8.html">EraX Social</a>
+            <a href="rwa.html">EraX Assets</a>
+            <a href="wallet.html">EraX Wallet</a>
+            <a href="paid-content.html">EraX Creator</a>
           </div>
           <div>
             <h4>Company</h4>
-            <a href="index.html#about">About us</a>
-            <a href="team.html">Team</a>
-            <a href="newsroom.html">Newsroom</a>
-            <a href="investors.html">Investors</a>
-            <a href="built-on-stellar.html">Built on Stellar</a>
+            <a href="index.html#about">About</a>
+            <a href="team.html">Careers</a>
+            <a href="newsroom.html">Company</a>
+            <a href="investors.html">Roadmap</a>
+            <a href="built-on-stellar.html">Technology</a>
           </div>
           <div>
             <h4>Trust &amp; Legal</h4>
@@ -82,22 +82,19 @@
           </div>
           <div>
             <h4>Resources</h4>
-            <a href="https://wefunder.com/cassator" target="_blank" rel="noopener">Wefunder</a>
-            <a href="investors.html">SEC Filing</a>
-            <a href="https://stellar.org/" target="_blank" rel="noopener">Stellar.org</a>
-            <a href="https://cassator-brandbook.webflow.io/" target="_blank" rel="noopener">Media Kit</a>
+            <a href="investors.html">Roadmap</a>
+            <a href="trust-center.html">Trust Center</a>
+            <a href="built-on-stellar.html">Technology</a>
+            <a href="newsroom.html">Company</a>
             <div class="socials">
-              <a href="https://x.com/cassator" target="_blank" rel="noopener" aria-label="X">X</a>
-              <a href="https://t.me/Sl8_Community" target="_blank" rel="noopener" aria-label="Telegram">Tg</a>
-              <a href="https://www.instagram.com/sl8.online" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
-              <a href="https://www.facebook.com/sl8.online" target="_blank" rel="noopener" aria-label="Facebook">Fb</a>
+              <a href="newsroom.html" aria-label="Company">Company</a>
             </div>
           </div>
         </div>
-        <p class="legal">EraX Digital is registered in the State of Delaware, USA. SEC filings: Regulation CF / Regulation D. EraX Digital is not a licensed financial institution. Investments in tokens and digital assets carry high risk. Past results do not guarantee future results. This website is for informational purposes only and does not constitute a public offer or investment recommendation.</p>
+        <p class="legal">EraX Digital is an independent Web3 technology company. Product features described on this website are in development unless a live service is actually shipped. This website is informational and is not an offer to sell a token, security, or investment product.</p>
         <div class="legal-row">
           <span>© 2026 EraX Digital</span>
-          <span>All rights reserved. Delaware, United States.</span>
+          <span>All rights reserved.</span>
         </div>
       </div>
     </footer>`);
