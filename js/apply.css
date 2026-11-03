@@ -1,0 +1,12 @@
+.resume-field { display: flex; flex-direction: column; gap: 8px; }
+.resume-field input[type="file"] { color: rgba(255, 255, 255, 0.72); font: inherit; }
+.resume-clear {
+  align-self: flex-start;
+  background: transparent;
+  border: 0;
+  color: #fa4c14;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+#application-error { color: #fa4c14; margin: 8px 0 0; }

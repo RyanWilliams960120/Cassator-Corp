@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const marker = '<div class="nav_link-wrp is--cont">';
+const i = html.indexOf(marker);
+console.log("nav contact index", i);
+console.log(html.slice(i, i + 2500));
+console.log("\n\n===== FOOTER SOCIALS =====\n");
+const s = html.indexOf('class="footer_socials"');
+console.log(html.slice(s - 80, s + 400));
+const g = html.indexOf("github.com/EraX-Digital");
+console.log("\n\n===== AFTER GITHUB =====\n");
+console.log(html.slice(g, g + 800));

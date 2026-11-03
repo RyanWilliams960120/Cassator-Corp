@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const i = html.indexOf("data-position=");
+console.log(html.slice(i, i + 400).replace(/\s+/g, " "));
+const j = html.indexOf("w-form-fail");
+console.log("\nFAIL", j);
+console.log(html.slice(j, j + 500).replace(/\s+/g, " "));
+const k = html.indexOf("success-message");
+console.log("\nSUCCESS text");
+console.log(html.slice(k, k + 800).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").slice(0, 400));

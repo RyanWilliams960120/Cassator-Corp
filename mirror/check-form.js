@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const start = html.indexOf("<form ");
+const end = html.indexOf("</form>", start);
+const form = html.slice(start, end);
+let depth = 0;
+const re = /<div\b|<\/div>/g;
+let m;
+while ((m = re.exec(form))) depth += m[0] === "<div" ? 1 : -1;
+console.log("div depth", depth);
+console.log("fields", ["First-name", "Last-name", "Email", "Role", "Message", "Resume", "Portfolio"].map((id) => id + ":" + form.includes('name="' + id + '"')).join(" "));

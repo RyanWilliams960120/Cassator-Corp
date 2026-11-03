@@ -40,6 +40,21 @@ function resolveFile(urlPath) {
 }
 
 http.createServer((req, res) => {
+  const pathname = decodeURIComponent((req.url || "/").split("?")[0]);
+  if (req.method === "POST" && pathname === "/api/apply") {
+    try {
+      require("./api/apply")(req, res);
+    } catch (error) {
+      res.writeHead(500, { "Content-Type": "application/json; charset=utf-8" });
+      res.end(JSON.stringify({ ok: false, error: "The application could not be sent. Please try again in a moment." }));
+    }
+    return;
+  }
+  if (req.method !== "GET" && req.method !== "HEAD") {
+    res.writeHead(405, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("Method not allowed");
+    return;
+  }
   const file = resolveFile(req.url);
   if (!file) {
     res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
