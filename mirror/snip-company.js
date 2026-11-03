@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("wallet.html", "utf8");
+const i = html.indexOf(">Company</a>");
+console.log(html.slice(i - 250, i + 20));
+console.log("--- second ---");
+const j = html.indexOf(">Company</a>", i + 5);
+console.log(html.slice(j - 180, j + 15));
+console.log("--- third ---");
+const k = html.indexOf(">Company</a>", j + 5);
+console.log(html.slice(k - 180, k + 15));

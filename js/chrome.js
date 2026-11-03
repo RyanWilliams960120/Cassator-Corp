@@ -18,7 +18,6 @@
         </div>
       </div>
       <a class="${active("investors.html")}" href="investors.html">Roadmap</a>
-      <a class="${active("newsroom.html")}" href="newsroom.html">Company</a>
       <a class="${active("team.html")}" href="team.html">Team</a>
       <a class="${active("careers.html")}" href="careers.html">Careers</a>
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
@@ -36,7 +35,6 @@
     <a href="wallet.html">03 EraX Wallet</a>
     <a href="paid-content.html">04 EraX Creator</a>
     <a href="investors.html">Roadmap</a>
-    <a href="newsroom.html">Company</a>
     <a href="team.html">Team</a>
     <a href="careers.html">Careers</a>
     <a href="trust-center.html">Trust Center</a>
@@ -73,7 +71,6 @@
             <a href="index.html#about">About</a>
             <a href="team.html">Team</a>
             <a href="careers.html">Careers</a>
-            <a href="newsroom.html">Company</a>
             <a href="investors.html">Roadmap</a>
             <a href="/documentation">Documentation</a>
             <a href="/whitepaper">Whitepaper</a>
@@ -96,9 +93,9 @@
             <a href="/whitepaper">Whitepaper</a>
             <a href="trust-center.html">Trust Center</a>
             <a href="built-on-stellar.html">Technology</a>
-            <a href="newsroom.html">Company</a>
             <div class="socials">
               <a href="https://www.linkedin.com/company/erax-digital/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://github.com/EraX-Digital" target="_blank" rel="noopener noreferrer" aria-label="EraX Digital on GitHub">GitHub</a>
             </div>
           </div>
         </div>
