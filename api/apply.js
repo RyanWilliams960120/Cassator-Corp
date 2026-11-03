@@ -43,7 +43,7 @@ function validateApplication(fields, file) {
   if (!first || !last) return { ok: false, error: "Enter your full name." };
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return { ok: false, error: "Enter a valid email address." };
   if (!position) return { ok: false, error: "Enter the position you are applying for." };
-  if (message.length < 20) return { ok: false, error: "Write a message explaining why you are a good fit for this role." };
+  if (!message) return { ok: false, error: "Write a message explaining why you are a good fit for this role." };
   if (!file || !file.buffer || !file.buffer.length) return { ok: false, error: "Add your CV or resume. PDF, DOC, and DOCX files are accepted." };
   if (file.truncated || file.buffer.length > MAX_BYTES) return { ok: false, error: "That file is too large. The maximum size is 4 MB." };
   const ext = extension(file.filename);

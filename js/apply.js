@@ -68,7 +68,7 @@
     if (!String(data.get("First-name") || "").trim() || !String(data.get("Last-name") || "").trim()) problem = problem || "Enter your full name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(data.get("Email") || "").trim())) problem = problem || "Enter a valid email address.";
     if (!String(data.get("Role") || "").trim()) problem = problem || "Enter the position you are applying for.";
-    if (message.length < 20) problem = problem || "Write a message explaining why you are a good fit for this role.";
+    if (!message) problem = problem || "Write a message explaining why you are a good fit for this role.";
     if (problem) {
       showError(problem);
       return;
