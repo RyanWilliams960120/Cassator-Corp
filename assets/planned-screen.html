@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EraX Digital planned interface</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0c0c0c; color: #fff; font-family: Arial, Helvetica, sans-serif; }
+  body { box-sizing: border-box; min-height: 100%; padding: 28px 22px; display: flex; flex-direction: column; gap: 14px; }
+  .mark { color: #FA4C14; font-weight: 700; letter-spacing: 0.08em; font-size: 12px; }
+  h1 { font-size: 26px; line-height: 1.15; margin: 0; font-weight: 700; }
+  p { color: #bdbdbd; font-size: 14px; line-height: 1.45; margin: 0; }
+  .row { border: 1px solid rgba(255,255,255,0.16); border-radius: 12px; padding: 14px 16px; }
+  .row strong { display: block; font-size: 15px; }
+  .row span { color: #9a9a9a; font-size: 12px; }
+</style>
+</head>
+<body>
+  <div class="mark">ERAX DIGITAL</div>
+  <h1 id="title">Planned interface</h1>
+  <p>This screen is a design placeholder. It is not a live product, a balance, or an offer.</p>
+  <div class="row"><strong id="a">Ethereum</strong><span id="a2">Primary network</span></div>
+  <div class="row"><strong id="b">Base</strong><span id="b2">First Layer 2</span></div>
+  <div class="row"><strong id="c">Wallet connection</strong><span id="c2">Authorization stays in the user's wallet</span></div>
+  <script>
+    var views = {
+      portfolio: ["Portfolio", "Ethereum", "Primary network", "Base", "First Layer 2", "Positions", "No balances are shown"],
+      topup: ["Receive", "Address", "Shown only after a wallet exists", "Network", "Ethereum or Base", "Confirmation", "The user reviews the transfer"],
+      send: ["Send", "Recipient", "Checked before signing", "Network", "Ethereum or Base", "Amount", "Confirmed in the user's wallet"],
+      earn: ["Activity", "History", "Not available yet", "Status", "No rewards program", "Note", "Nothing here is a yield product"],
+      rwa: ["Assets", "EraX Assets", "Not operational", "Issuance", "Future possibility", "Note", "Not an investment product"],
+      all: ["Overview", "Ethereum", "Primary network", "Base", "First Layer 2", "Products", "Social, wallet, and creator tools are planned"],
+      layers: ["Creator tools", "Profile", "Planned", "Publishing", "Planned", "Payments", "Not live"],
+      subscriptions: ["Subscriptions", "Access", "Planned entitlement", "Renewal", "Not configured", "Note", "No checkout is live"],
+      feed: ["Social feed", "Posts", "Planned", "Communities", "Planned", "Wallet", "Connected only when the user approves"]
+    };
+    var key = new URLSearchParams(location.search).get("view") || "all";
+    var row = views[key] || views.all;
+    document.getElementById("title").textContent = row[0];
+    document.getElementById("a").textContent = row[1];
+    document.getElementById("a2").textContent = row[2];
+    document.getElementById("b").textContent = row[3];
+    document.getElementById("b2").textContent = row[4];
+    document.getElementById("c").textContent = row[5];
+    document.getElementById("c2").textContent = row[6];
+  </script>
+</body>
+</html>

@@ -5,7 +5,7 @@
   document.write(`
   <header class="header">
     <a class="brand" href="index.html" aria-label="EraX Digital">
-      <img src="assets/logo.svg" alt="EraX Digital">
+      <img src="/assets/erax-logotype.svg" alt="EraX Digital">
     </a>
     <nav class="nav" aria-label="Primary">
       <div class="drop" id="sl8drop">
@@ -21,6 +21,8 @@
       <a class="${active("newsroom.html")}" href="newsroom.html">Company</a>
       <a class="${active("team.html")}" href="team.html">Careers</a>
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
+      <a href="/documentation">Documentation</a>
+      <a href="/whitepaper">Whitepaper</a>
     </nav>
     <div class="header-right">
       <a class="btn-go" href="sl8.html">Ecosystem</a>
@@ -36,6 +38,8 @@
     <a href="newsroom.html">Company</a>
     <a href="team.html">Careers</a>
     <a href="trust-center.html">Trust Center</a>
+    <a href="/documentation">Documentation</a>
+    <a href="/whitepaper">Whitepaper</a>
     <a href="built-on-stellar.html">Technology</a>
     <a href="sl8.html">Ecosystem</a>
   </div>`);
@@ -46,8 +50,8 @@
       <div class="wrap">
         <p class="footer-quote">EraX Digital is building the next generation of connected digital experiences by combining social networking, blockchain technology and creator-focused financial tools.</p>
         <div class="mails">
-          <a href="team.html">Careers</a>
-          <a href="newsroom.html">Company</a>
+          <a href="mailto:contact@erax.digital">contact@erax.digital</a>
+          <a href="mailto:jobs@erax.digital">jobs@erax.digital</a>
         </div>
         <div class="stores">
           <a href="sl8.html">EraX Social</a>
@@ -68,6 +72,8 @@
             <a href="team.html">Careers</a>
             <a href="newsroom.html">Company</a>
             <a href="investors.html">Roadmap</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/whitepaper">Whitepaper</a>
             <a href="built-on-stellar.html">Technology</a>
           </div>
           <div>
@@ -83,11 +89,13 @@
           <div>
             <h4>Resources</h4>
             <a href="investors.html">Roadmap</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/whitepaper">Whitepaper</a>
             <a href="trust-center.html">Trust Center</a>
             <a href="built-on-stellar.html">Technology</a>
             <a href="newsroom.html">Company</a>
             <div class="socials">
-              <a href="newsroom.html" aria-label="Company">Company</a>
+              <a href="https://www.linkedin.com/company/erax-digital/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
             </div>
           </div>
         </div>

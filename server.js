@@ -22,7 +22,9 @@ const types = {
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
   ".png": "image/png",
-  ".woff2": "font/woff2"
+  ".woff2": "font/woff2",
+  ".json": "application/json; charset=utf-8",
+  ".pdf": "application/pdf"
 };
 
 function resolveFile(urlPath) {

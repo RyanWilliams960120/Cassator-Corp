@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("mirror/index.html", "utf8");
+const i = html.indexOf("mailto:hello@cassator.corp");
+console.log(html.slice(i - 80, i + 200).replace(/\s+/g, " "));
+const j = html.indexOf("mailto:press@cassator.corp");
+console.log("\nPRESS", html.slice(j - 40, j + 120).replace(/\s+/g, " "));
+const a = html.lastIndexOf("<a ", i);
+const end = html.indexOf("</a>", j);
+console.log("\nLEN", end + 4 - a);
+fs.writeFileSync("mirror/contact-buttons.html", html.slice(a, end + 4));
+console.log("saved");

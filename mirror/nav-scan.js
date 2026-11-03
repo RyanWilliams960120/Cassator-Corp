@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const headerEnd = html.indexOf("</header>");
+const main = html.indexOf("<main");
+const footer = html.indexOf("<footer");
+console.log("headerEnd", headerEnd, "main", main, "footer", footer, "len", html.length);
+const nav = html.slice(html.indexOf("<nav"), html.indexOf("</nav>") + 6);
+const texts = [...nav.matchAll(/>([^<]{2,40})</g)].map((m) => m[1].trim()).filter(Boolean);
+console.log("NAV TEXTS", [...new Set(texts)].join(" | "));
+const foot = html.slice(footer, footer + 2500);
+const ftexts = [...foot.matchAll(/>([^<]{2,40})</g)].map((m) => m[1].trim()).filter(Boolean);
+console.log("FOOT", [...new Set(ftexts)].slice(0, 40).join(" | "));

@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const i = html.indexOf('href="/trust-center" class="nav_link"');
+console.log(html.slice(i, i + 500));
+console.log("\n\nMENU?");
+const j = html.indexOf("sl8menu");
+console.log("sl8menu", j);
+const k = html.indexOf('id="sl8menu"');
+console.log("id", k);
+const m = html.indexOf("nav_menu");
+console.log("nav_menu", m, html.slice(m, m + 200));

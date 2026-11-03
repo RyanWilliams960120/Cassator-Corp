@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+console.log("len", html.length);
+console.log("title", (html.match(/<title>[^<]+/) || [])[0]);
+const main = html.indexOf("<main");
+const mainEnd = html.indexOf("</main>");
+console.log("main", main, "mainEnd", mainEnd);
+console.log(html.slice(mainEnd, mainEnd + 400).replace(/\s+/g, " "));
+const scripts = [...html.matchAll(/<script[^>]+src="([^"]+)"/g)].map((m) => m[1]);
+console.log(scripts.join("\n"));

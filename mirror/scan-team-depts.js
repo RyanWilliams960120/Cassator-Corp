@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const re = /<div class="text-10 is--white-55 is--jet">([^<]+)<\/div>/g;
+let m;
+while ((m = re.exec(html))) console.log("DEPT", m[1], "at", m.index);
+console.log("--- social snippets ---");
+const socials = ["footer_social", "SL8", "linkedin", "LinkedIn", "t.me", "twitter", "x.com"];
+socials.forEach((s) => console.log(s, (html.split(s).length - 1)));
+const i = html.indexOf("footer_social");
+console.log(html.slice(i - 200, i + 900));

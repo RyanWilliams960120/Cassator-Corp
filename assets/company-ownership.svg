@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Digital ownership">
+  <rect width="1600" height="900" fill="#0c0c0c"/>
+  <circle cx="470" cy="430" r="150" fill="none" stroke="#FA4C14" stroke-width="3"/>
+  <circle cx="800" cy="300" r="92" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7"/>
+  <circle cx="1040" cy="500" r="120" fill="none" stroke="#FA4C14" stroke-width="3"/>
+  <path d="M610 380 L720 320 M870 350 L940 450 M600 500 L930 520" stroke="#ffffff" stroke-width="2" opacity="0.45"/>
+  <circle cx="470" cy="430" r="8" fill="#FA4C14"/>
+  <circle cx="800" cy="300" r="8" fill="#ffffff"/>
+  <circle cx="1040" cy="500" r="8" fill="#FA4C14"/>
+  <text x="120" y="760" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Digital ownership</text>
+  <text x="120" y="820" fill="#FA4C14" font-family="Arial, Helvetica, sans-serif" font-size="28">EraX Digital</text>
+</svg>

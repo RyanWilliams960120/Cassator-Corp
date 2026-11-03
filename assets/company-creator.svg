@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Creator economy">
+  <rect width="1600" height="900" fill="#0c0c0c"/>
+  <rect x="180" y="180" width="360" height="460" rx="20" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <rect x="220" y="230" width="280" height="160" fill="#FA4C14"/>
+  <rect x="220" y="420" width="200" height="18" fill="#ffffff" opacity="0.8"/>
+  <rect x="220" y="456" width="150" height="18" fill="#ffffff" opacity="0.35"/>
+  <rect x="640" y="250" width="700" height="110" rx="16" fill="none" stroke="#FA4C14" stroke-width="2"/>
+  <rect x="640" y="390" width="700" height="110" rx="16" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="680" y="315" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="32">Profiles and publishing</text>
+  <text x="680" y="455" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="32">Subscriptions and tips</text>
+  <text x="180" y="760" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Creator economy</text>
+  <text x="180" y="820" fill="#FA4C14" font-family="Arial, Helvetica, sans-serif" font-size="28">Planned EraX Creator tools</text>
+</svg>
