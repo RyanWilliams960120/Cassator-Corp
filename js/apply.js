@@ -95,6 +95,7 @@
           success.hidden = false;
           success.style.display = "block";
         }
+        window.alert("Thank you. Your application, message, and CV were sent.");
       })
       .catch(function () {
         showError("The application could not be sent. Please try again in a moment.");
