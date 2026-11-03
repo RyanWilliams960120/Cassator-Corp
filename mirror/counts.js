@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const p = html.indexOf('class="principles');
+const plat = html.indexOf('class="platform');
+const chunk = html.slice(p, plat);
+fs.writeFileSync("mirror/principles-chunk.html", chunk);
+console.log("principles len", chunk.length);
+console.log("journey_text", (html.match(/class="journey_text/g) || []).length);
+console.log("year-text", (html.match(/class="year-text"/g) || []).length);
+console.log("journey_div", (html.match(/class="journey_div/g) || []).length);
+console.log("vision_card", (html.match(/class="vision_card"/g) || []).length);
+console.log("vision_card is", (html.match(/class="vision_card /g) || []).length);
