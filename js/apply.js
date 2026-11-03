@@ -90,7 +90,11 @@
         }
         formError.hidden = true;
         form.hidden = true;
-        if (success) success.style.display = "block";
+        form.style.setProperty("display", "none", "important");
+        if (success) {
+          success.hidden = false;
+          success.style.display = "block";
+        }
       })
       .catch(function () {
         showError("The application could not be sent. Please try again in a moment.");

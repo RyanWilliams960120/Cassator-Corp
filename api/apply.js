@@ -92,26 +92,36 @@ function buildMessage(application) {
   };
 }
 
-function mailConfigured() {
-  return Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
+function createTransport() {
+  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+    const port = Number(process.env.SMTP_PORT || 587);
+    return nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port,
+      secure: process.env.SMTP_SECURE === "true" || port === 465,
+      auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+      connectionTimeout: 20000,
+      greetingTimeout: 20000,
+      socketTimeout: 20000,
+    });
+  }
+  return nodemailer.createTransport({
+    host: "mx1.hostinger.com",
+    port: 25,
+    secure: false,
+    requireTLS: true,
+    name: "erax.digital",
+    connectionTimeout: 20000,
+    greetingTimeout: 20000,
+    socketTimeout: 20000,
+    tls: { servername: "mx1.hostinger.com" },
+  });
 }
 
 async function deliver(application) {
-  if (!mailConfigured()) {
-    const error = new Error("Applications cannot be delivered right now because email delivery is not configured.");
-    error.status = 503;
-    throw error;
-  }
   const message = buildMessage(application);
-  const port = Number(process.env.SMTP_PORT || 587);
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port,
-    secure: process.env.SMTP_SECURE === "true" || port === 465,
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-  });
-  await transporter.sendMail({
-    from: process.env.SMTP_FROM || process.env.SMTP_USER,
+  await createTransport().sendMail({
+    from: process.env.SMTP_FROM || "EraX Digital <jobs@erax.digital>",
     to: "jobs@erax.digital",
     replyTo: application.email,
     subject: message.subject,

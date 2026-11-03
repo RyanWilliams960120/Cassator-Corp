@@ -9,6 +9,7 @@
   font: inherit;
   padding: 0;
 }
+#wf-form-JOIN-CASSATOR[hidden] { display: none !important; }
 #application-error {
   color: #fa4c14;
   display: block;

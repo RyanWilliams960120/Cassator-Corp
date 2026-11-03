@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("careers.html", "utf8");
+const i = html.indexOf("clickable_btn");
+const j = html.lastIndexOf("clickable_btn");
+console.log("first", i, "last", j);
+console.log("\n--- LAST BUTTON ---");
+console.log(html.slice(j - 200, j + 700));
+console.log("\n--- SUCCESS ---");
+const s = html.indexOf("w-form-done");
+console.log(html.slice(s - 120, s + 500));
