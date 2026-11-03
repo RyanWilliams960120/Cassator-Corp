@@ -1,0 +1,15 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const head = html.slice(0, html.indexOf("</title>") + 8);
+console.log(head.slice(head.lastIndexOf("<title>")));
+const desc = html.match(/<meta name="description" content="[^"]*"/);
+console.log(desc && desc[0]);
+const canon = html.match(/rel="canonical"[^>]*>/);
+console.log("canon", canon && canon[0]);
+const hero = html.slice(html.indexOf("hero-inner_title"), html.indexOf("hero-inner_title") + 1800);
+console.log("\nHERO\n", hero.replace(/></g, ">\n<").slice(0, 1600));
+const cta = html.slice(html.indexOf('id="cta"'), html.indexOf('id="cta"') + 900);
+console.log("\nCTA\n", cta.replace(/></g, ">\n<").slice(0, 800));
+console.log("\napply css", html.includes("apply.css"), "apply js", html.includes("apply.js"));
+const chrome = fs.existsSync("js/chrome.js") ? fs.readFileSync("js/chrome.js", "utf8") : "";
+console.log("chrome team", chrome.includes("/team"), chrome.includes("Careers"));

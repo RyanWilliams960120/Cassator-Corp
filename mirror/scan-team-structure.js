@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const main = html.slice(html.indexOf("<main"), html.indexOf("<footer"));
+const headings = [...main.matchAll(/<h[1-3][^>]*>([\s\S]*?)<\/h[1-3]>/g)].map((m) => m[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+console.log("HEADINGS");
+headings.forEach((h, i) => console.log(i, h.slice(0, 140)));
+console.log("\nsections", (main.match(/<section/g) || []).length);
+const ids = [...main.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
+console.log("ids", ids.join(", "));
+console.log("main length", main.length);
+console.log("position items", (main.match(/position-item/g) || []).length);
+console.log("team", (main.match(/team_item|team-card|member/gi) || []).slice(0, 20));

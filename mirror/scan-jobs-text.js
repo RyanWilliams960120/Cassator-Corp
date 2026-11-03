@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const start = html.indexOf('class="position u-section"');
+const end = html.indexOf('class="cta-inner', start);
+const chunk = html.slice(start, end);
+const text = chunk.replace(/<[^>]+>/g, "\n").replace(/\n+/g, "\n").replace(/[ \t]+/g, " ");
+console.log(text.slice(0, 2500));
+console.log("\n\n==== TEAM CARDS ====\n");
+const t0 = html.indexOf('class="team u-section"');
+const t1 = html.indexOf('class="position u-section"', t0);
+const team = html.slice(t0, t1).replace(/<[^>]+>/g, "\n").replace(/\n+/g, "\n").replace(/[ \t]+/g, " ");
+console.log(team.slice(0, 2000));

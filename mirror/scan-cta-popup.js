@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const i = html.indexOf("team_buttons");
+console.log(html.slice(i, i + 1200));
+console.log("\n\nPOPUP start", html.indexOf("position_popup"));
+const p = html.indexOf('<div class="position_popup">');
+console.log(html.slice(p, p + 200));
+console.log("--- end search ---");
+const close = html.indexOf("</footer>", p);
+console.log("footer after popup?", close, "popup", p);
+console.log(html.slice(p - 80, p));

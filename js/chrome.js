@@ -19,7 +19,8 @@
       </div>
       <a class="${active("investors.html")}" href="investors.html">Roadmap</a>
       <a class="${active("newsroom.html")}" href="newsroom.html">Company</a>
-      <a class="${active("team.html")}" href="team.html">Careers</a>
+      <a class="${active("team.html")}" href="team.html">Team</a>
+      <a class="${active("careers.html")}" href="careers.html">Careers</a>
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
       <a href="/documentation">Documentation</a>
       <a href="/whitepaper">Whitepaper</a>
@@ -36,7 +37,8 @@
     <a href="paid-content.html">04 EraX Creator</a>
     <a href="investors.html">Roadmap</a>
     <a href="newsroom.html">Company</a>
-    <a href="team.html">Careers</a>
+    <a href="team.html">Team</a>
+    <a href="careers.html">Careers</a>
     <a href="trust-center.html">Trust Center</a>
     <a href="/documentation">Documentation</a>
     <a href="/whitepaper">Whitepaper</a>
@@ -69,7 +71,8 @@
           <div>
             <h4>Company</h4>
             <a href="index.html#about">About</a>
-            <a href="team.html">Careers</a>
+            <a href="team.html">Team</a>
+            <a href="careers.html">Careers</a>
             <a href="newsroom.html">Company</a>
             <a href="investors.html">Roadmap</a>
             <a href="/documentation">Documentation</a>
