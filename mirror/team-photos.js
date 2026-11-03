@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("team.html", "utf8");
+const imgs = [...html.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
+const people = imgs.filter((tag) => /team|portrait|member|jpg|jpeg|webp|avif|png/i.test(tag) && !/svg|icon-|Rectangle|footer_corner|nav_icon/i.test(tag));
+console.log("img count", imgs.length);
+const main = html.slice(html.indexOf("is--team-page"), html.indexOf("position_popup"));
+const cards = [...main.matchAll(/<img\b[^>]*src="([^"]+)"[^>]*>/g)].map((m) => m[1]);
+console.log("\nMAIN IMAGES");
+for (const src of cards) console.log(src.slice(0, 180));
+const names = main.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, "\n").split("\n").map((s) => s.replace(/\s+/g, " ").trim()).filter((s) => s && s.length < 80 && !/^[A-Z0-9]{20,}$/.test(s));
+console.log("\nTEXT\n" + names.slice(0, 40).join("\n"));
