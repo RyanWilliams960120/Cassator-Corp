@@ -1,0 +1,12 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const header = html.indexOf('class="header"');
+console.log(html.slice(header, header + 1800).replace(/></g, ">\n<").slice(0, 2200));
+console.log("\n\n==== HERO TEXT ====\n");
+const hero = html.indexOf('class="hero_container');
+console.log(html.slice(hero, hero + 2200).replace(/></g, ">\n<").slice(0, 2500));
+console.log("\n\n==== FONT LINK ====\n");
+const font = html.indexOf("fonts.googleapis");
+console.log(html.slice(font - 20, font + 400));
+console.log("\n\n==== BODY END ====\n");
+console.log(html.slice(-600));

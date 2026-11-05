@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const i = html.indexOf("header_container");
+const chunk = html.slice(i, i + 12000);
+const imgs = [...chunk.matchAll(/<img[^>]{0,400}>/g)].slice(0, 8);
+imgs.forEach((m, n) => console.log("\nIMG", n, m[0].slice(0, 350)));
+const a = chunk.indexOf("<a ");
+console.log("\nFIRST A", chunk.slice(a, a + 500));
+console.log("\nlogo count", (html.match(/logo/gi) || []).length);
+const m = html.match(/class="[^"]*logo[^"]*"/gi);
+console.log(m && m.slice(0, 20));
