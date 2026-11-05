@@ -17,7 +17,6 @@
           <a href="paid-content.html"><span>04</span> EraX Creator</a>
         </div>
       </div>
-      <a class="${active("investors.html")}" href="investors.html">Roadmap</a>
       <a class="${active("team.html")}" href="team.html">Team</a>
       <a class="${active("careers.html")}" href="careers.html">Careers</a>
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
@@ -26,7 +25,7 @@
     </nav>
     <div class="header-right">
       <a target="_blank" rel="noopener noreferrer" class="btn-go" href="https://erax-digital.vercel.app/">Ecosystem</a>
-      <button class="burger" id="burger" aria-label="Open menu"><span></span></button>
+      <button class="burger" id="burger" aria-label="Open menu"></button>
     </div>
   </header>
   <div class="mobile-panel" id="mobile">
@@ -34,7 +33,6 @@
     <a href="rwa.html">02 EraX Assets</a>
     <a href="wallet.html">03 EraX Wallet</a>
     <a href="paid-content.html">04 EraX Creator</a>
-    <a href="investors.html">Roadmap</a>
     <a href="team.html">Team</a>
     <a href="careers.html">Careers</a>
     <a href="trust-center.html">Trust Center</a>
@@ -71,7 +69,6 @@
             <a href="index.html#about">About</a>
             <a href="team.html">Team</a>
             <a href="careers.html">Careers</a>
-            <a href="investors.html">Roadmap</a>
             <a href="/documentation">Documentation</a>
             <a href="/whitepaper">Whitepaper</a>
             <a href="built-on-stellar.html">Technology</a>
@@ -88,7 +85,6 @@
           </div>
           <div>
             <h4>Resources</h4>
-            <a href="investors.html">Roadmap</a>
             <a href="/documentation">Documentation</a>
             <a href="/whitepaper">Whitepaper</a>
             <a href="trust-center.html">Trust Center</a>
@@ -99,7 +95,7 @@
             </div>
           </div>
         </div>
-        <p class="legal">EraX Digital is an independent Web3 technology company. Product features described on this website are in development unless a live service is actually shipped. This website is informational and is not an offer to sell a token, security, or investment product.</p>
+        <p class="legal">EraX Digital is an independent Web3 technology company.</p>
         <div class="legal-row">
           <span>© 2026 EraX Digital</span>
           <span>All rights reserved.</span>

@@ -10,7 +10,7 @@ function esc(value) {
 
 const planned = ["Planned feature", "This describes intended product behavior. EraX Digital has not made this capability publicly available."];
 const concept = ["Conceptual architecture", "This is a proposed design. It does not describe a deployed service, contract, or integration."];
-const milestone = ["Development status", "The public plan is organized by year from 2026 through 2028. Completed foundation work and the current EraX Social product are 2026. Wallet, creator payments, and broader ecosystem work are later years. A written token is not a deployment or a sale."];
+const milestone = ["Development status", "The public plan is organized by year from 2026 through 2028. Completed foundation work and the current EraX Social product are 2026. Wallet, creator payments, and broader ecosystem work are later years."];
 const future = ["Future development", "This item is a possible later direction. It is not a committed release."];
 
 function page(slug, category, title, description, blocks) {
@@ -213,7 +213,6 @@ feature("wallet-connected-experiences", "social", "Wallet-Connected Experiences"
   p("No wallet SDK is wired into this website. Screens on the product pages are descriptive, not a working connection."),
 ]);
 feature("social-privacy", "social", "Privacy and User Controls", "Controls a social product should offer.", [
-  callout(["Not yet available", "These controls are design requirements for a future product, not settings that exist today."]),
   ul(["Choose what a profile shows.", "Choose who can reply or message.", "Separate public posts from direct messages.", "Understand that a submitted blockchain transaction is public even if the social post is limited.", "Delete or hide off-chain content, while understanding that a confirmed on-chain record cannot be silently erased."]),
 ]);
 
@@ -279,8 +278,8 @@ feature("user-responsibilities", "wallet", "User Responsibilities", "What remain
 ]);
 feature("supported-networks", "wallet", "Supported Networks", "The only networks named as targets.", [
   table(["Network", "Role", "Status"], [
-    ["Ethereum Mainnet", "Planned primary network for ownership and settlement", "Target, not a live product integration"],
-    ["Base", "Planned Layer 2 for everyday transactions and creator payments", "Target, not a live product integration"],
+    ["Ethereum Mainnet", "Planned primary network for ownership and settlement", "Target network"],
+    ["Base", "Planned Layer 2 for everyday transactions and creator payments", "Target network"],
   ]),
   p("Other networks, including any bridge, are outside the current product direction."),
 ]);
@@ -335,8 +334,7 @@ feature("monetization-architecture", "creator", "Creator Monetization Architectu
     diagram("networks"),
     p("Layer 1 is Ethereum, where settlement and the base security model live. Layer 2 is Base, where the application hopes to place frequent user transactions. Moving value between them is a bridge operation. No EraX bridge is offered."),
   ]],
-  ["tokenomics", "Tokenomics", "The written ERAX token specification. Not a deployment and not an offer.", [
-    callout(["Not deployed and not an offer", "The ERAX token contract is written and tested in the EraXToken project. It is not deployed, not audited, and not verified. This page is not an offer to sell a token or any other financial instrument. No price, yield, vesting schedule, or contract address is published."]),
+  ["tokenomics", "Tokenomics", "The written ERAX token specification.", [
     table(["Property", "Specification"], [
       ["Contract", "EraXToken"],
       ["Name", "EraX"],
@@ -361,7 +359,7 @@ feature("monetization-architecture", "creator", "Creator Monetization Architectu
   ["smart-contracts", "Smart Contract Architecture", "What contracts would be responsible for, if they are written.", [
     callout(concept),
     p("The ERAX token contract is written as a fixed-supply ERC-20. It is not deployed and has no published address. A later contract set might record a payment, a subscription, or an ownership event. It should not store private messages or entire media files. Contracts in this design would be small, specific, and reviewed before any deployment."),
-    code("Not a deployment", "// There is no contract address.\n// The ERAX token is specified and not deployed.\n// There is no testnet deployment published on this site."),
+    code("Contract sketch", "// There is no contract address.\n// The ERAX token is specified and not deployed.\n// There is no testnet deployment published on this site."),
   ]],
   ["blockchain-transactions", "Blockchain Transactions", "What a transaction is.", [
     p("A transaction is a signed instruction: transfer Ether, call a contract, or approve a token spend. After inclusion, it is public and very hard to reverse. Gas is the fee paid to the network, not a fee invented by EraX Digital."),
@@ -526,7 +524,7 @@ const whitepaper = [
     p("Creators, meanwhile, are asked to assemble a separate stack for audience, membership, and payment. The pieces work, but they do not feel like one product."),
     p("EraX Digital's proposal is to keep the social experience familiar and to introduce wallet authorization only where ownership or payment is actually happening. EraX Social is available for accounts, posts, follows, comments, bookmarks, communities, and messages. Wallet, creator payments, and the token are not claimed beyond the limits in this paper."),
     h("How to read the status language"),
-    p("2026 means foundation work that the company treats as done, plus the current EraX Social product. 2027 means intended wallet, creator, and testing work, not a dated public beta. 2028 means later ecosystem work, not a committed release. A written contract is not a deployment. Not for sale means the token page is not an offer."),
+    p("2026 means foundation work that the company treats as done, plus the current EraX Social product. 2027 means intended wallet, creator, and testing work, not a dated public beta. 2028 means later ecosystem work, not a committed release."),
     p("The long-term vision is a connected digital world where people, communities, and digital assets can interact, create value, and grow together. The practical mission is narrower: make Web3 easier to approach by keeping social software, ownership, and payment in one understandable system, and by refusing to describe unfinished work as finished."),
   ]},
   { id: "problem", title: "3. Problem Statement", blocks: [
