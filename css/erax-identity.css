@@ -1,13 +1,14 @@
 /* EraX Digital identity
-   Midnight blue, champagne gold, Cormorant Garamond + Manrope.
+   Midnight blue, champagne gold.
+   Type matches cassator.com: Playfair Display, Golos Text, JetBrains Mono.
    Layered over the existing layout. Motion stays subtle. */
 
 :root {
   --_colors---accent: #c6a36a;
   --_colors---secondary: #071018;
   --_colors---primary: #f6f0e4;
-  --_text---font-family-primary: "Manrope", "Segoe UI", sans-serif;
-  --_text---font-family-secondary: "Cormorant Garamond", Georgia, serif;
+  --_text---font-family-primary: "Golos Text", sans-serif;
+  --_text---font-family-secondary: "Playfair Display", serif;
   --erax-ink: #071018;
   --erax-navy: #10192e;
   --erax-gold: #c6a36a;
@@ -24,7 +25,6 @@ html {
 body {
   background: transparent !important;
   color: var(--erax-ivory);
-  font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
 .erax-space {
@@ -60,31 +60,21 @@ body > footer {
   background-color: transparent;
 }
 
-body,
-.u-paragraph-main,
-.u-paragraph-small,
-.nav_link,
-.button_main_text,
-.text-10,
-.text-13,
 .docs-main,
-.wp-main {
-  font-family: "Manrope", "Segoe UI", sans-serif;
+.wp-main,
+.erax-alloc {
+  font-family: "Golos Text", sans-serif;
 }
 
-.u-text-style-h1,
-.u-text-style-h2,
-.u-text-style-h3,
-.u-text-style-h4,
-.title-row,
 .docs-main h1,
 .docs-main h2,
 .docs-main h3,
 .wp-main h1,
 .wp-main h2,
-.wp-main h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 500;
+.wp-main h3,
+.erax-alloc h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
 }
 
 .header,
@@ -137,8 +127,6 @@ body,
 .nav-dropdown_link,
 .nav .text-13,
 .horiz-8 {
-  font-family: "Manrope", "Segoe UI", sans-serif !important;
-  letter-spacing: 0.01em;
   color: #f7f1e4 !important;
   opacity: 1 !important;
 }
@@ -246,6 +234,19 @@ body,
   animation: erax-spin 42s linear infinite !important;
 }
 
+.principles_inner-cell.sticky canvas {
+  display: none !important;
+}
+
+.principles_inner-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35));
+}
+
 @keyframes erax-spin {
   to { transform: rotate(360deg); }
 }
@@ -260,8 +261,6 @@ body,
 
 .hero_card .u-text-style-h4 {
   color: var(--erax-ivory);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  letter-spacing: 0.01em;
 }
 
 .hero_card .text-10 {
@@ -316,6 +315,83 @@ body,
 .footer,
 .footer a {
   color: var(--erax-muted);
+}
+
+.footer .op-15 {
+  opacity: 0.82 !important;
+  color: #d9d3c6 !important;
+}
+
+.principles,
+.platform {
+  --_colors---accent: #1c150c;
+  --erax-gold: #1c150c;
+  --erax-gold-soft: #3d3118;
+}
+
+.principles h2,
+.principles h3,
+.principles p,
+.principles .u-paragraph-main,
+.principles .u-paragraph-small,
+.platform h2,
+.platform h3,
+.platform p,
+.platform .u-paragraph-main,
+.platform .u-paragraph-small {
+  color: #1c150c !important;
+}
+
+.principles .u-paragraph-small.is--accent,
+.platform .u-paragraph-small.is--accent,
+.principles .eyebrow,
+.platform .eyebrow {
+  color: #3d3118 !important;
+  opacity: 1 !important;
+}
+
+img.icon-14,
+.principles_bg {
+  filter: hue-rotate(32deg) saturate(0.45) brightness(1.3);
+}
+
+.principles_circle svg [stroke="#FA4C14"] {
+  stroke: #c6a36a !important;
+}
+.principles_circle svg [fill="#FA4C14"] {
+  fill: #c6a36a !important;
+}
+.principles_circle svg [stroke="white"] {
+  stroke: rgba(198, 163, 106, 0.45) !important;
+}
+
+.vision_visual-devider {
+  background-image: linear-gradient(#c6a36a00, #c6a36a 50%, #c6a36a00) !important;
+}
+
+.cta-inner_grad,
+.principles_inner-cell.sticky {
+  background-image: radial-gradient(circle closest-side, #c6a36a33, #c6a36a00 79%) !important;
+}
+
+.features_num {
+  -webkit-text-stroke-color: rgba(198, 163, 106, 0.45) !important;
+}
+
+.features_item-img,
+.ecosystem_tag {
+  border-color: rgba(198, 163, 106, 0.5) !important;
+}
+
+.distribution_line-inner.is--3 {
+  background-color: #c6a36a !important;
+}
+
+.u-orange-corner-2,
+.u-orange-corner-3,
+.u-orange-corner-4,
+.u-orange-corner-5 {
+  border-color: #c6a36a !important;
 }
 
 @media (min-width: 992px) {
@@ -442,7 +518,8 @@ body,
 
 @media (prefers-reduced-motion: reduce) {
   .hero_bird img.erax-mark,
-  .cta > img.cta-img {
+  .cta > img.cta-img,
+  .principles_inner-img {
     animation: none !important;
   }
 }

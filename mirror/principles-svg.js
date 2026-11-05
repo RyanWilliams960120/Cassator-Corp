@@ -1,0 +1,13 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const start = html.indexOf('class="principles ');
+const end = html.indexOf('class="platform ');
+const chunk = html.slice(start, end > start ? end : start + 80000);
+const colors = new Set();
+const re = /#[0-9A-Fa-f]{3,8}/g;
+let m;
+while ((m = re.exec(chunk))) colors.add(m[0].toUpperCase());
+console.log("colors", [...colors]);
+console.log("len", chunk.length, "start", start);
+const i = chunk.indexOf("<svg");
+console.log(chunk.slice(i, i + 1500));
