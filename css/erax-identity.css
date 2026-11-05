@@ -232,7 +232,7 @@ body,
 
 .erax-mark-wrap {
   position: absolute;
-  inset: 8%;
+  inset: 0;
   display: grid;
   place-items: center;
   pointer-events: none;
@@ -293,9 +293,18 @@ body,
   height: 7.2rem;
 }
 
-.cta > img {
+.cta > img.cta-img {
+  width: min(36vw, 440px) !important;
+  height: min(36vw, 440px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 3.2rem !important;
+  bottom: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   object-fit: contain;
-  object-position: center 18%;
+  object-position: center;
+  animation: erax-spin 48s linear infinite !important;
 }
 
 .platform_card,
@@ -344,8 +353,7 @@ body,
   }
 
   .hero_bird {
-    width: min(20vw, 300px) !important;
-    overflow: hidden;
+    width: min(44vw, 680px) !important;
     aspect-ratio: 1;
     position: absolute !important;
     top: 46% !important;
@@ -393,8 +401,7 @@ body,
 
   .hero_bird {
     position: relative !important;
-    width: min(58vw, 260px) !important;
-    overflow: hidden;
+    width: min(78vw, 420px) !important;
     margin: 0 auto 1rem;
     left: auto !important;
     right: auto !important;
@@ -434,7 +441,8 @@ body,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero_bird img.erax-mark {
+  .hero_bird img.erax-mark,
+  .cta > img.cta-img {
     animation: none !important;
   }
 }

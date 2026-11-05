@@ -15,8 +15,8 @@ walk(".", files);
 let n = 0;
 files.forEach((file) => {
   const html = fs.readFileSync(file, "utf8");
-  if (!html.includes("erax-identity.css?v=7")) return;
-  fs.writeFileSync(file, html.replace(/erax-identity\.css\?v=7/g, "erax-identity.css?v=8"));
+  if (!html.includes("erax-identity.css?v=9")) return;
+  fs.writeFileSync(file, html.replace(/erax-identity\.css\?v=9/g, "erax-identity.css?v=10"));
   n++;
 });
 console.log("updated", n);
