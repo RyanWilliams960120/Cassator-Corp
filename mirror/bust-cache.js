@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 function walk(dir, out) {
   for (const name of fs.readdirSync(dir)) {
-    if (name === "node_modules" || name === "mirror" || name.endsWith(".tmpwrite")) continue;
+    if (name === "node_modules" || name === "mirror") continue;
     const full = path.join(dir, name);
     let st;
     try { st = fs.statSync(full); } catch (e) { continue; }
@@ -13,20 +13,10 @@ function walk(dir, out) {
 const files = [];
 walk(".", files);
 let n = 0;
-const failed = [];
 files.forEach((file) => {
-  let html;
-  try { html = fs.readFileSync(file, "utf8"); } catch (e) { failed.push(file + " read"); return; }
-  if (!html.includes("erax-identity.css?v=3") && !html.includes("erax-atmosphere.js?v=3")) return;
-  const next = html
-    .replace(/erax-identity\.css\?v=3/g, "erax-identity.css?v=4")
-    .replace(/erax-atmosphere\.js\?v=3/g, "erax-atmosphere.js?v=4");
-  try {
-    fs.writeFileSync(file, next);
-    n++;
-  } catch (e) {
-    failed.push(file + " " + e.code);
-  }
+  const html = fs.readFileSync(file, "utf8");
+  if (!html.includes("erax-identity.css?v=7")) return;
+  fs.writeFileSync(file, html.replace(/erax-identity\.css\?v=7/g, "erax-identity.css?v=8"));
+  n++;
 });
-try { fs.unlinkSync("built-on-stellar.html.tmpwrite"); } catch (e) {}
-console.log("updated", n, "failed", failed.join(" | "));
+console.log("updated", n);

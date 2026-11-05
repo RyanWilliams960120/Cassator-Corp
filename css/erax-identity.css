@@ -37,20 +37,19 @@ body {
 }
 
 body > .header,
-body > .main,
-body > main,
-body > .footer,
-body > footer,
-body > .loader,
-body > .cassator-preloader {
-  position: relative;
-  z-index: 1;
-}
-
 .header,
 .loader,
 .cassator-preloader {
-  z-index: 30;
+  position: relative;
+  z-index: 80 !important;
+}
+
+body > .main,
+body > main,
+body > .footer,
+body > footer {
+  position: relative;
+  z-index: 1;
 }
 
 .main,
@@ -88,15 +87,50 @@ body,
   font-weight: 500;
 }
 
-.header {
-  background: linear-gradient(180deg, rgba(7, 16, 24, 0.94), rgba(7, 16, 24, 0.72));
-  backdrop-filter: blur(18px);
+.header,
+.header.is--blured,
+.header_container.u-container {
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 .nav {
-  background-color: rgba(12, 18, 34, 0.96) !important;
-  border: 1px solid rgba(228, 208, 164, 0.62) !important;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  background-color: #161e32 !important;
+  border: 1px solid #e4d0a4 !important;
+  box-shadow: none;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.page-blur,
+.page-blur.is--bottom {
+  display: none !important;
+}
+
+.header_overlay,
+.drop_overlay {
+  z-index: 20 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: rgba(7, 16, 24, 0.45) !important;
+  background-image: none !important;
+}
+
+.nav-dropdown_elem {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-color: #161e32 !important;
+  border-top: 1px solid #e4d0a4 !important;
+}
+
+.nav_drop,
+.nav-dropdown_height,
+.nav-dropdown_list,
+.nav-dropdown_link {
+  z-index: 40;
+  pointer-events: auto !important;
 }
 
 .nav_link,
@@ -189,10 +223,11 @@ body,
   padding-bottom: 1.4rem !important;
 }
 
+.cassator-preloader,
 .hero_bird .phximg,
-.hero_bird .phx-ascii,
-.hero_bird .phx-trail {
+.hero_bird canvas {
   display: none !important;
+  visibility: hidden !important;
 }
 
 .erax-mark-wrap {
@@ -204,8 +239,8 @@ body,
 }
 
 .hero_bird img.erax-mark {
-  width: 68%;
-  height: 68%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35));
   animation: erax-spin 42s linear infinite !important;
@@ -309,7 +344,8 @@ body,
   }
 
   .hero_bird {
-    width: min(34vw, 480px) !important;
+    width: min(20vw, 300px) !important;
+    overflow: hidden;
     aspect-ratio: 1;
     position: absolute !important;
     top: 46% !important;
@@ -357,7 +393,8 @@ body,
 
   .hero_bird {
     position: relative !important;
-    width: min(88vw, 520px) !important;
+    width: min(58vw, 260px) !important;
+    overflow: hidden;
     margin: 0 auto 1rem;
     left: auto !important;
     right: auto !important;
