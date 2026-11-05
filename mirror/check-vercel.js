@@ -12,7 +12,7 @@ function get(url) {
 }
 (async () => {
   for (const p of paths) {
-    const r = await get("https://companysite-wheat.vercel.app" + p);
+    const r = await get("https://erax-digital.vercel.app" + p);
     console.log(r.status || r.error, r.location, r.url);
   }
 })();

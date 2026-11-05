@@ -10,7 +10,7 @@ function esc(value) {
 
 const planned = ["Planned feature", "This describes intended product behavior. EraX Digital has not made this capability publicly available."];
 const concept = ["Conceptual architecture", "This is a proposed design. It does not describe a deployed service, contract, or integration."];
-const milestone = ["Completed development milestone", "Phases 01 and 02 record foundational work. They do not mean that the full platform or every planned feature is publicly available."];
+const milestone = ["Development status", "The public plan is organized by year from 2026 through 2028. Completed foundation work and the current EraX Social product are 2026. Wallet, creator payments, and broader ecosystem work are later years. A written token is not a deployment or a sale."];
 const future = ["Future development", "This item is a possible later direction. It is not a committed release."];
 
 function page(slug, category, title, description, blocks) {
@@ -42,12 +42,12 @@ const categories = [
 const pages = [
   page("introduction", "start", "Introduction to EraX Digital", "What EraX Digital is, what it is building, and what is not yet available.", [
     callout(["Current company information", company]),
-    p("The working tagline is Connect. Create. Own. It describes the intended relationship between social participation, creative work, and digital ownership. It is not a claim that those capabilities are already live."),
+    p("The working tagline is Connect. Create. Own. It describes the relationship between social participation, creative work, and digital ownership."),
     h("What the company is building"),
-    p("The core direction is a SocialFi ecosystem: social interaction, digital identity, wallet connectivity, creator monetization, and blockchain-based ownership in one product family. The named product directions are EraX Social, EraX Wallet, and EraX Creator. EraX Assets is a potential future product, not a current service."),
+    p("The core direction is a SocialFi ecosystem: social interaction, digital identity, wallet connectivity, creator monetization, and blockchain-based ownership in one product family. EraX Social is the current social product. EraX Wallet and EraX Creator are planned. EraX Assets is a potential future product, not a current service."),
     h("What this documentation is"),
-    p("These pages explain the intended design. Where the repository does not contain an implementation, the page says so. There is no public claim here of a live network, a deployed smart contract, a token, an audit, or a user count."),
-    ul(["Ethereum Mainnet is the planned primary network for ownership and settlement.", "Base, an Ethereum Layer 2, is the planned network for everyday activity such as creator payments.", "Phases 01 and 02 are completed foundational milestones.", "Phases 03 through 06 are upcoming, planned, or future work."]),
+    p("These pages explain the product and the written technical design. They do not claim a deployed token, an audit, a user count, or a token sale."),
+    ul(["EraX Social is available at https://erax-digital.vercel.app/.", "Ethereum Mainnet is the primary network for ownership and settlement.", "Base, an Ethereum Layer 2, is the intended network for the ERAX token and for later creator payments.", "The public roadmap is organized as 2026, 2027, and 2028."]),
   ]),
   page("what-is-socialfi", "start", "What Is SocialFi?", "A plain-language definition of SocialFi and how EraX Digital uses the term.", [
     callout(concept),
@@ -60,7 +60,7 @@ const pages = [
   page("ecosystem-overview", "start", "EraX Digital Ecosystem Overview", "How the planned products fit together.", [
     callout(concept),
     diagram("ecosystem"),
-    p("EraX Social is the planned place for profiles, feeds, communities, and messages. EraX Wallet is the planned place for connecting to Ethereum and Base, seeing assets, and authorizing transactions. EraX Creator is the planned place for paid content, subscriptions, and tips. EraX Assets is reserved for possible later work on issuance and tokenization."),
+    p("EraX Social is the current place for profiles, feeds, communities, and messages, at https://erax-digital.vercel.app/. EraX Wallet is the planned place for connecting to Ethereum and Base, seeing assets, and authorizing transactions. EraX Creator is the planned place for paid content, subscriptions, and tips. EraX Assets is reserved for possible later work on issuance and tokenization."),
     h("How a person would move through the ecosystem"),
     ul(["Create an account and a profile in EraX Social.", "Connect a wallet when an action needs one.", "Publish or participate without a chain transaction for ordinary social activity.", "Use EraX Creator when a payment or subscription is involved.", "Treat EraX Assets as unavailable."]),
   ]),
@@ -71,27 +71,26 @@ const pages = [
     ul(["Make social participation understandable without specialist knowledge.", "Keep ownership actions explicit and user-approved.", "Give creators a planned path to charge for access, subscriptions, and tips.", "Use Ethereum and Base rather than inventing a separate Layer 1.", "Say clearly when a feature is planned rather than available."]),
     h("Principles"),
     p("The public principles are Accessibility, User Ownership, Transparency, and Innovation. In documentation, transparency means labeling planned work as planned."),
+    h("2026 to 2028"),
+    ul(["2026: company foundation, core infrastructure, and EraX Social as the current product. The ERAX token is specified and not deployed.", "2027: intended work on EraX Wallet, EraX Creator, and security testing. Token deployment is not scheduled and is not a sale.", "2028: ecosystem growth. EraX Assets stays a future possibility and is not an investment product."]),
   ]),
-  page("development-status", "start", "Development Status", "The six official phases and what completion does and does not mean.", [
+  page("development-status", "start", "Development Status", "What 2026, 2027, and 2028 mean for the product.", [
     callout(milestone),
     diagram("roadmap"),
-    table(["Phase", "Title", "Status"], [
-      ["01", "Strategic Foundation", "Completed"],
-      ["02", "Core Infrastructure", "Completed"],
-      ["03", "SocialFi Platform", "Upcoming"],
-      ["04", "Creator Economy", "Planned"],
-      ["05", "Security, Testing & Beta Launch", "Planned"],
-      ["06", "Ecosystem Growth & Expansion", "Future development"],
+    table(["Year", "Focus", "Status"], [
+      ["2026", "Foundation, infrastructure, and EraX Social", "Foundation completed. Social product available."],
+      ["2027", "Wallet, creator tools, and security testing", "Planned. Not a public beta date."],
+      ["2028", "Ecosystem growth", "Future development. EraX Assets is not operational."],
     ]),
-    p("No public launch date is stated. EraX Digital has not announced a token launch or token sale. A completed foundational phase is a planning and architecture milestone, not evidence that a public product is operating."),
+    p("Earlier foundation work covered company positioning, the Ethereum and Base direction, and the technical architecture for accounts, data, and wallet connectivity. That work does not mean every product is public. EraX Wallet, EraX Creator, and EraX Assets are not the current social product. The ERAX token is specified, not deployed, and not offered for sale."),
   ]),
   page("faq", "start", "Frequently Asked Questions", "Short answers about the company, products, networks, and status.", [
     h("Is the platform live?"),
-    p("No. EraX Social, EraX Wallet, and EraX Creator are planned products. EraX Assets is a future possibility and is not operational."),
+    p("EraX Social is available at https://erax-digital.vercel.app/. It includes accounts, posts, follows, comments, bookmarks, communities, and messages. Wallet sign-in can use an Ethereum or Solana signature. EraX Wallet, EraX Creator, and EraX Assets are not that product. Creator subscriptions and on-chain payments are not in the current social build."),
     h("Which networks are intended?"),
-    p("Ethereum Mainnet is the planned primary network. Base is the planned Layer 2 for everyday transactions. No contract addresses are published because no project contracts are deployed from this website repository."),
+    p("Ethereum Mainnet is the primary network for ownership and settlement. Base is the intended Layer 2 for the ERAX token and for later creator payments. No contract address is published because the token contract is not deployed."),
     h("Is there a token?"),
-    p("EraX Digital has not announced a token launch or a token sale. Documentation does not describe tokenomics, staking yields, or an investment offer."),
+    p("The ERAX token is specified as an ERC-20 with a fixed supply of 1,000,000,000 tokens, 18 decimals, and a 0% transfer tax. It is not deployed, not audited, and not for sale. There is no published price, yield, or contract address. See Tokenomics."),
     h("Does the company custody assets?"),
     p("The wallet architecture is not verified as custodial or non-custodial. Until that design is implemented and documented from the product itself, this site does not claim either model."),
     h("Where can I read the longer document?"),
@@ -104,7 +103,7 @@ const pages = [
     h("Responsibility split"),
     table(["Layer", "Responsibility", "Status"], [
       ["Experience", "Screens for social, wallet, and creator tasks", "Planned"],
-      ["Social application", "Profiles, feeds, communities, messages", "Planned"],
+      ["Social application", "Profiles, feeds, communities, messages", "Available in EraX Social"],
       ["Identity", "Account, session, and permission concepts", "Foundational design only"],
       ["Wallet", "Connection and transaction approval", "Planned"],
       ["Data", "Off-chain content and settings", "Not deployed in this repository"],
@@ -115,12 +114,12 @@ const pages = [
   page("product-overview", "ecosystem", "Product Overview", "The four product names and their current status.", [
     callout(planned),
     table(["Product", "Intended role", "Status"], [
-      ["EraX Social", "Profiles, feeds, publishing, communities, messaging, wallet-connected experiences", "Planned"],
+      ["EraX Social", "Profiles, feeds, publishing, communities, messaging, wallet-connected experiences", "Available"],
       ["EraX Wallet", "Ethereum and Base connectivity, asset visibility, transaction authorization", "Planned"],
       ["EraX Creator", "Creator profiles, paid content, subscriptions, tips, payments", "Planned"],
       ["EraX Assets", "Possible issuance and tokenization", "Future, not operational"],
     ]),
-    p("Product pages on the website use the same descriptions. None of these products should be read as a launched service."),
+    p("EraX Social is the current product. EraX Wallet and EraX Creator are planned. EraX Assets is not an investment product and is not operational."),
   ]),
   page("user-experience", "ecosystem", "User Experience", "How the intended experience is meant to feel.", [
     callout(planned),
@@ -160,21 +159,22 @@ const pages = [
   ]),
   page("future-modules", "ecosystem", "Future Ecosystem Modules", "Work that is explicitly not part of the current product set.", [
     callout(future),
-    p("Phase 06 names possible later work: advanced creator and community tools, additional wallet capability, rewards or staking, cross-chain interoperability, tokenization, and integrations. None of these are scheduled, and none are available."),
+    p("2028 names possible later work: advanced creator and community tools, additional wallet capability, rewards or staking, cross-chain interoperability, tokenization, and integrations. None of these are scheduled, and none are available."),
     ul(["EraX Assets remains a future possibility for issuance and tokenization.", "Rewards and staking are not a live program and have no published rate.", "Cross-chain behavior is not designed as a bridge product in the current site."]),
   ]),
 ];
 
 function feature(slug, category, title, description, body, tone) {
-  const lead = tone === "concept" ? callout(concept) : tone === "none" ? null : callout(planned);
+  const socialNow = ["EraX Social", "The social product is available at https://erax-digital.vercel.app/. Accounts, posts, follows, comments, bookmarks, communities, and messages are part of that product. Creator subscriptions and on-chain payments are not."];
+  const lead = tone === "concept" ? callout(concept) : tone === "none" ? null : category === "social" ? callout(socialNow) : callout(planned);
   const blocks = body[0] && body[0].type === "callout" ? body : lead ? [lead].concat(body) : body;
   pages.push(page(slug, category, title, description, blocks));
 }
 
-feature("social-overview", "social", "EraX Social Overview", "The planned SocialFi product.", [
-  p("EraX Social is a planned SocialFi platform for user profiles, social feeds, content publishing, communities, messaging, and wallet connectivity. It is not a live network."),
-  h("Intended scope"),
-  ul(["Registration and customizable profiles.", "A chronological or ranked feed of posts from people and communities the user follows.", "Likes, comments, and other responses.", "Community spaces.", "Private messaging.", "A clear handoff into wallet-connected actions."]),
+feature("social-overview", "social", "EraX Social Overview", "The current social product.", [
+  p("EraX Social is the social product at https://erax-digital.vercel.app/. People can create an account, publish, follow, comment, bookmark, join communities, and send messages. Connecting a wallet is optional and can use an Ethereum or Solana signature. Portfolio prices are not shown. Creator subscriptions and on-chain payments are not part of this build."),
+  h("Current scope"),
+  ul(["Accounts and profiles.", "Posts from people and communities.", "Comments, follows, and bookmarks.", "Community spaces.", "Private messaging.", "Optional wallet signature for sign-in."]),
   diagram("social-flow"),
 ]);
 feature("user-registration", "social", "User Registration", "How account creation is intended to work.", [
@@ -335,10 +335,33 @@ feature("monetization-architecture", "creator", "Creator Monetization Architectu
     diagram("networks"),
     p("Layer 1 is Ethereum, where settlement and the base security model live. Layer 2 is Base, where the application hopes to place frequent user transactions. Moving value between them is a bridge operation. No EraX bridge is offered."),
   ]],
+  ["tokenomics", "Tokenomics", "The written ERAX token specification. Not a deployment and not an offer.", [
+    callout(["Not deployed and not an offer", "The ERAX token contract is written and tested in the EraXToken project. It is not deployed, not audited, and not verified. This page is not an offer to sell a token or any other financial instrument. No price, yield, vesting schedule, or contract address is published."]),
+    table(["Property", "Specification"], [
+      ["Contract", "EraXToken"],
+      ["Name", "EraX"],
+      ["Symbol", "ERAX"],
+      ["Standard", "ERC-20"],
+      ["Intended network", "Base, an Ethereum Layer 2"],
+      ["Language", "Solidity 0.8.34"],
+      ["Library", "OpenZeppelin Contracts 5.6.1"],
+      ["Decimals", "18"],
+      ["Transfer tax", "0%"],
+      ["Initial supply", "1,000,000,000 ERAX"],
+      ["Raw supply", "1,000,000,000 × 10^18"],
+      ["Recipient", "The deployer, once, in the constructor"],
+    ]),
+    h("What the contract does"),
+    p("The constructor sets the name to EraX and the symbol to ERAX, then mints the full supply once to the deployer. There is no public or external mint function and no burn function. Transfers use the standard OpenZeppelin ERC-20 transfer, approve, and transferFrom behavior. A transfer of zero tokens is allowed. An insufficient balance or allowance reverts. An unlimited allowance does not decrease when it is used."),
+    h("What the contract does not do"),
+    ul(["No owner, access-control role, pause, blacklist, tax, or upgrade path.", "No administrator can mint, burn another holder's tokens, pause transfers, or change balances.", "No chain check inside the contract. The same bytecode can be deployed to a test network or to Base. Deployment has not happened.", "No vesting, staking, governance, sale, or price.", "No recovery of lost tokens."]),
+    h("Tests and deployment"),
+    p("Project tests check the name, symbol, decimals, supply, recipient, transfers, allowances, and the absence of mint, owner, tax, blacklist, and upgrade functions in the ABI. Tests are not an audit. The deployment module does not contain a wallet or a key and does not deploy the contract. This website does not publish a contract address."),
+  ]],
   ["smart-contracts", "Smart Contract Architecture", "What contracts would be responsible for, if they are written.", [
     callout(concept),
-    p("A future contract set might record a payment, a subscription, or an ownership event. It should not store private messages or entire media files. Contracts in this design would be small, specific, and reviewed before any deployment. None are in the website repository."),
-    code("Not a deployment", "// There is no contract address.\n// There is no testnet deployment published on this site."),
+    p("The ERAX token contract is written as a fixed-supply ERC-20. It is not deployed and has no published address. A later contract set might record a payment, a subscription, or an ownership event. It should not store private messages or entire media files. Contracts in this design would be small, specific, and reviewed before any deployment."),
+    code("Not a deployment", "// There is no contract address.\n// The ERAX token is specified and not deployed.\n// There is no testnet deployment published on this site."),
   ]],
   ["blockchain-transactions", "Blockchain Transactions", "What a transaction is.", [
     p("A transaction is a signed instruction: transfer Ether, call a contract, or approve a token spend. After inclusion, it is public and very hard to reverse. Gas is the fee paid to the network, not a fee invented by EraX Digital."),
@@ -405,22 +428,15 @@ feature("monetization-architecture", "creator", "Creator Monetization Architectu
   feature(item[0], "security", item[1], item[2], item[3], "concept");
 });
 
-pages.push(page("roadmap", "roadmap", "Development Roadmap", "Objectives for each official phase.", [
+pages.push(page("roadmap", "roadmap", "Development Roadmap", "The plan for 2026, 2027, and 2028.", [
   callout(milestone),
   diagram("roadmap"),
-  h("01 — Strategic Foundation — Completed"),
-  p("This phase established the company's product vision, independent positioning, technical direction, and initial ecosystem strategy. It includes positioning, requirements, an initial SocialFi architecture, an Ethereum and Base strategy, and security and scalability principles."),
-  h("02 — Core Infrastructure — Completed"),
-  p("This phase established foundational technical architecture: backend and infrastructure direction, an identity and account model, wallet-connectivity architecture, a database and API approach, and access-control design. It is not a claim that those systems are publicly operating."),
-  h("03 — SocialFi Platform — Upcoming"),
-  p("The next stage is the core social product: registration, profiles, feeds, publishing, responses, communities, messaging, and wallet-connected experiences."),
-  h("04 — Creator Economy — Planned"),
-  p("Creator profiles, paid content, subscriptions, tips, Base smart-contract integration, and on-chain payment infrastructure."),
-  h("05 — Security, Testing & Beta Launch — Planned"),
-  p("Contract testing, security assessment, performance work, monitoring, closed-beta preparation, and product refinement. This is not an announcement of a public beta."),
-  h("06 — Ecosystem Growth & Expansion — Future development"),
-  p("Possible later work on advanced creator tools, wallet features, rewards or staking, cross-chain interoperability, tokenization, and integrations."),
-  p("EraX Digital has not announced a token launch or token sale."),
+  h("2026 — Foundation and EraX Social"),
+  p("Company positioning, product requirements, the Ethereum and Base direction, and the foundational architecture for accounts, data, and wallet connectivity are treated as completed. EraX Social is the current product: accounts, posts, follows, comments, bookmarks, communities, and messages. The ERAX token contract is written, with a fixed supply and no admin controls. It is not deployed, not audited, and not for sale."),
+  h("2027 — Wallet, creator tools, and testing"),
+  p("Intended work covers the EraX Wallet experience, EraX Creator tools for paid content, subscriptions, and tips, and security testing before any wider release. Token deployment, if it is pursued, would be separate from a sale and is not scheduled. This year is not a public beta date."),
+  h("2028 — Ecosystem growth"),
+  p("Later work may include broader creator and community tools, wallet capability, and interoperability. EraX Assets remains a future possibility. It is not operational and it is not an investment product. Rewards or staking are not a live program and have no published rate."),
 ]));
 
 [
@@ -454,13 +470,13 @@ pages.push(page("roadmap", "roadmap", "Development Roadmap", "Objectives for eac
     p("The website is static HTML, CSS from the existing design, and a small local preview server. There is no Solidity project, no database migration, and no application backend in the tree. A future environment should be documented when it exists, including how to run it locally."),
   ]],
   ["testing-and-security", "Testing and Security", "The bar before a beta.", [
-    p("Phase 05 is the planned place for contract tests, security assessment, performance work, and a closed beta. Writing the plan is not the same as finishing the tests. No audit firm is named because none has been engaged in the material published here."),
+    p("Security testing is part of the 2027 plan: contract tests, security assessment, performance work, and preparation for a possible closed beta. Writing the plan is not the same as finishing the tests. No audit firm is named because none has been engaged in the material published here. Tests of the written ERAX token are not an audit."),
   ]],
   ["developer-faq", "Developer FAQ", "Direct answers for builders.", [
     h("Where is the GitHub SDK?"),
     p("No SDK repository is published from this site."),
     h("What is the contract address?"),
-    p("None. Do not use an address from an example."),
+    p("None. The ERAX token is specified and not deployed. Do not use an address from an example."),
     h("Which chain IDs will be used?"),
     p("The intended networks are Ethereum Mainnet and Base. Numeric chain configuration will be documented with the client that uses it, not before."),
     h("Can I list a token?"),
@@ -479,7 +495,8 @@ pages.push(page("glossary", "reference", "Glossary", "Short definitions used acr
     ["Ethereum", "The Layer 1 network planned for ownership and settlement."],
     ["Base", "An Ethereum Layer 2 planned for everyday transactions. Not a separate Layer 1."],
     ["Layer 2", "A network that executes transactions in relation to Ethereum rather than replacing it."],
-    ["Smart contract", "A program at an address on a blockchain. None are deployed by this site."],
+    ["Smart contract", "A program at an address on a blockchain. The ERAX token is written and not deployed."],
+    ["ERAX", "The specified ERC-20 token: 1,000,000,000 supply, 18 decimals, 0% tax, intended for Base. Not deployed and not for sale."],
     ["Digital wallet", "Software that holds keys and asks the user to approve signatures and transactions."],
     ["Digital identity", "The account, profile, and any voluntarily linked address. They are not the same object."],
     ["On-chain", "Recorded in a blockchain transaction."],
@@ -500,16 +517,16 @@ const whitepaper = [
     p(company + " The tagline is Connect. Create. Own."),
     p("This whitepaper describes a proposed SocialFi ecosystem. Social networking, digital identity, wallet connectivity, creator monetization, and blockchain-based ownership are intended to sit in one product family without pretending that every click is a financial transaction."),
     p("Ethereum Mainnet is the planned Layer 1 for ownership and settlement. Base, an Ethereum Layer 2, is the planned network for creator payments, subscriptions, and other everyday transactions. Base is not described as an independent Layer 1."),
-    p("EraX Social, EraX Wallet, and EraX Creator are planned products. EraX Assets is a future possibility and is not operational. Phases 01 and 02 are completed foundational milestones. They do not mean the platform is publicly available. Phases 03 to 06 are upcoming, planned, or future work. No token sale is announced."),
+    p("EraX Social is the current social product. EraX Wallet and EraX Creator are planned. EraX Assets is a future possibility and is not operational. The public plan runs from 2026 through 2028. The ERAX token is specified and is not deployed, audited, or offered for sale."),
     p("Readers should treat diagrams in this document as conceptual. A box in a diagram is a responsibility the design assigns, not a server, contract, or vendor that has been deployed. Where a choice is still open — custody model, RPC provider, indexer, sign-in protocol, media storage — the text says so."),
   ]},
   { id: "introduction", title: "2. Introduction", blocks: [
     p("Digital communities already exist inside large social platforms. Those platforms proved that people will publish, follow, and gather around creators. They also concentrated distribution, identity, and monetization in accounts that the platform can limit or remove."),
     p("Blockchains added a different primitive: a user can hold keys and authorize a transaction that does not depend on a single application database. Wallets, fees, and unfamiliar signing prompts made that primitive hard to use. Most people do not want a lesson in gas in order to read a post."),
     p("Creators, meanwhile, are asked to assemble a separate stack for audience, membership, and payment. The pieces work, but they do not feel like one product."),
-    p("EraX Digital's proposal is to keep the social experience familiar and to introduce wallet authorization only where ownership or payment is actually happening. That is a product thesis. It is not a report of a launched network."),
+    p("EraX Digital's proposal is to keep the social experience familiar and to introduce wallet authorization only where ownership or payment is actually happening. EraX Social is available for accounts, posts, follows, comments, bookmarks, communities, and messages. Wallet, creator payments, and the token are not claimed beyond the limits in this paper."),
     h("How to read the status language"),
-    p("Completed development milestone means foundational work that the company treats as done. It does not mean a public product. Planned feature means the capability is in the intended product, not that a screen or endpoint exists. Conceptual architecture means a proposed split of responsibilities. Future development means a direction that has not been committed as a release. Not yet available means a person cannot use the capability on this website today."),
+    p("2026 means foundation work that the company treats as done, plus the current EraX Social product. 2027 means intended wallet, creator, and testing work, not a dated public beta. 2028 means later ecosystem work, not a committed release. A written contract is not a deployment. Not for sale means the token page is not an offer."),
     p("The long-term vision is a connected digital world where people, communities, and digital assets can interact, create value, and grow together. The practical mission is narrower: make Web3 easier to approach by keeping social software, ownership, and payment in one understandable system, and by refusing to describe unfinished work as finished."),
   ]},
   { id: "problem", title: "3. Problem Statement", blocks: [
@@ -533,7 +550,7 @@ const whitepaper = [
     p("These parts are intended to feel like one journey. A person can join, post, and talk without a chain write. The same person can connect a wallet when they decide to pay or to show an address. The documentation for each product states the same boundary."),
     h("A single journey, stated as steps"),
     ul(["The person creates an account and a profile. This step is off-chain and does not require a wallet.", "The person publishes and responds inside EraX Social. Likes, comments, and messages are social actions, not transfers.", "The person connects a wallet only to show an address or to approve a payment. Connection is not permission to move funds.", "A paid post, subscription, or tip is reviewed in EraX Creator, then signed in the wallet, with Base as the intended network.", "EraX Assets is not on this path. Issuance and tokenization remain future exploration."]),
-    p("Nothing in that sequence is available as a public service. The sequence is the product definition later phases are meant to implement."),
+    p("Account creation, posting, comments, communities, and messages are available in EraX Social. Paid posts, subscriptions, tips, and EraX Assets are not. The later steps are the product definition for 2027 and 2028."),
     diagram("ecosystem"),
   ]},
   { id: "architecture", title: "5. Ecosystem Architecture", blocks: [
@@ -550,7 +567,7 @@ const whitepaper = [
     h("Backend and data layer"),
     p("Off-chain storage for profiles, posts, messages, and settings. This layer is not deployed in the website repository."),
     h("Smart contract layer"),
-    p("Future programs for selected payments and ownership events. No contract is deployed."),
+    p("The ERAX token contract is written as a fixed-supply ERC-20 and is not deployed. Later programs for selected payments and ownership events are still future work."),
     h("Blockchain network layer"),
     p("Base for frequent transactions and Ethereum Mainnet for settlement and ownership cases that justify Layer 1 cost."),
     h("How the layers are allowed to call each other"),
@@ -559,7 +576,7 @@ const whitepaper = [
   ]},
   { id: "products", title: "6. Product Architecture", blocks: [
     h("EraX Social"),
-    p("A planned SocialFi platform for user profiles, social feeds, content publishing, communities, messaging, and wallet-connected experiences."),
+    p("The current social product, at https://erax-digital.vercel.app/, for accounts, posts, follows, comments, bookmarks, communities, and messages. Optional wallet sign-in can use an Ethereum or Solana signature. Creator subscriptions and on-chain payments are not in this build."),
     diagram("social-flow"),
     h("EraX Wallet"),
     p("A planned wallet experience for Ethereum and Base connectivity, digital asset visibility, and transaction authorization. The company does not claim a custodial or a non-custodial service until the implementation exists and is documented."),
@@ -606,12 +623,12 @@ const whitepaper = [
   ]},
   { id: "creator-model", title: "9. Creator Economy Model", blocks: [
     p("A creator participates by publishing work and, optionally, setting a price. Viewers can read free work, pay for an item, subscribe, or tip. Community discussion stays in the social product. The commercial term is visible before anyone pays."),
-    ul(["Paid access unlocks a specific item.", "A subscription is recurring access for a stated period.", "A tip is voluntary and separate from a like.", "Settlement is intended on Base.", "No native EraX token is required for this model, and none is announced.", "Income is not guaranteed."]),
+    ul(["Paid access unlocks a specific item.", "A subscription is recurring access for a stated period.", "A tip is voluntary and separate from a like.", "Settlement is intended on Base.", "The creator model does not require the ERAX token. The token is specified and is not deployed or for sale.", "Income is not guaranteed."]),
     h("Participation and content"),
     p("A creator is an account with a public profile and a body of work. Free posts can circulate in EraX Social like any other post. A paid post carries a visible price and an access rule. The file or text that is being sold should be stored off-chain. What may later be recorded on Base is the payment, not the file."),
     h("Subscriptions, tips, and community"),
     p("A subscription is access for a stated period in exchange for a recurring payment. Renewal, cancellation, and a failed payment have to be defined before anyone is charged. They are not defined as a billing system today. A tip is a one-off payment and must not be implied by a like. Community discussion — replies, membership, conversation — stays a social function. Payment-gated communities, if they are offered later, have to show the price before a person joins."),
-    p("Creator payments are intended to settle on Base because they are smaller and more frequent than the ownership events reserved for Ethereum Mainnet. No asset is accepted today. No creator is onboarded through this website. Nothing in this model requires a native EraX token, a staking rate, or a revenue share, and none of those is announced."),
+    p("Creator payments are intended to settle on Base because they are smaller and more frequent than the ownership events reserved for Ethereum Mainnet. No asset is accepted today. No creator is onboarded through this website. This model does not require the ERAX token, a staking rate, or a revenue share. The token is specified separately and is not for sale."),
     diagram("creator-pay"),
   ]},
   { id: "security", title: "10. Security Architecture", blocks: [
@@ -641,22 +658,15 @@ const whitepaper = [
   ]},
   { id: "roadmap-wp", title: "13. Development Roadmap", blocks: [
     diagram("roadmap"),
-    table(["Phase", "Name", "Status", "Objective"], [
-      ["01", "Strategic Foundation", "Completed", "Vision, positioning, requirements, and the Ethereum and Base direction."],
-      ["02", "Core Infrastructure", "Completed", "Foundational architecture for identity, data, wallet connectivity, and access control. Not a public launch."],
-      ["03", "SocialFi Platform", "Upcoming", "The core social product."],
-      ["04", "Creator Economy", "Planned", "Paid content, subscriptions, tips, and Base payment design."],
-      ["05", "Security, Testing & Beta Launch", "Planned", "Testing, assessment, and preparation for a possible closed beta. Not a public beta announcement."],
-      ["06", "Ecosystem Growth & Expansion", "Future development", "Later tools, possible rewards, interoperability, and tokenization research."],
+    table(["Year", "Focus", "Status", "Objective"], [
+      ["2026", "Foundation and EraX Social", "In progress as the current year", "Completed foundation and the current social product. Token specified, not deployed."],
+      ["2027", "Wallet, creator tools, and testing", "Planned", "Wallet experience, creator payments, and security testing. Not a sale and not a dated beta."],
+      ["2028", "Ecosystem growth", "Future development", "Broader tools. EraX Assets remains not operational."],
     ]),
-    h("What each phase is for"),
-    p("Phase 01, Strategic Foundation, is completed. It covered the company's product vision, independent positioning, technical direction, and initial ecosystem strategy: requirements, an initial SocialFi architecture, the Ethereum and Base strategy, and security and scalability principles."),
-    p("Phase 02, Core Infrastructure, is completed as a foundational milestone. It covered the technical architecture direction: a backend and infrastructure approach, an identity and account model, wallet-connectivity architecture, a database and API approach, and access-control design. Completing that phase does not mean those systems are publicly operating. This repository is the public website, not that infrastructure."),
-    p("Phase 03, SocialFi Platform, is upcoming. The intended deliverable is the core social product: registration, profiles, feeds, publishing, likes and comments, communities, messaging, and wallet-connected experiences."),
-    p("Phase 04, Creator Economy, is planned. The intended deliverable is creator profiles, paid content, subscriptions, tips, Base contract integration, and payment infrastructure. Integration work is not present in this repository."),
-    p("Phase 05, Security, Testing and Beta Launch, is planned. It is the place for contract tests, security assessment, performance work, monitoring, and preparation for a possible closed beta. It is not an announcement that a public beta has a date."),
-    p("Phase 06, Ecosystem Growth and Expansion, is future development. It names possible later work and does not schedule it."),
-    p("No completion dates or launch dates are set. EraX Digital has not announced a token launch or token sale."),
+    h("What each year is for"),
+    p("2026 covers the company's product vision, independent positioning, the Ethereum and Base direction, and the foundational architecture for accounts, data, and wallet connectivity. EraX Social is available for accounts, posts, follows, comments, bookmarks, communities, and messages. The ERAX token is a written ERC-20 with a fixed supply of 1,000,000,000, 18 decimals, and no transfer tax. It has no admin mint, burn, pause, or upgrade path. It is not deployed and it is not for sale."),
+    p("2027 is the intended year for the EraX Wallet experience and for EraX Creator: paid content, subscriptions, tips, and payment design on Base. It is also the year for security testing and preparation. It is not an announcement that a public beta has a date, and it is not a token sale."),
+    p("2028 is future ecosystem work. It may include further creator and community tools, wallet capability, and interoperability. EraX Assets is not operational and is not an investment product. Rewards or staking are not a live program and have no published rate."),
   ]},
   { id: "risks", title: "14. Risks and Considerations", blocks: [
     ul(["Smart-contract vulnerabilities, if and when contracts are deployed.", "Ethereum and Base network conditions, including congestion and fee spikes.", "Wallet phishing and malicious signature requests.", "Regulatory uncertainty for payments, digital assets, and consumer platforms.", "Privacy loss from public addresses and from linking them to profiles.", "Scalability limits if too much social activity is placed on-chain.", "Adoption risk if wallet prompts are required too early.", "Dependence on RPC providers, indexers, wallets, and the Base and Ethereum networks, none of which EraX Digital controls."]),
@@ -666,7 +676,7 @@ const whitepaper = [
   ]},
   { id: "future", title: "15. Future Development", blocks: [
     callout(future),
-    p("Phase 06 collects ideas that are not in the current build: advanced creator and community tools, further wallet features, rewards or staking, cross-chain interoperability, digital-asset tokenization, and integrations. Publishing the list is not a release commitment. Rewards, if ever considered, would need their own explanation and would not be described as a yield."),
+    p("2028 collects ideas that are not in the current build: advanced creator and community tools, further wallet features, rewards or staking, cross-chain interoperability, digital-asset tokenization, and integrations. Publishing the list is not a release commitment. Rewards, if ever considered, would need their own explanation and would not be described as a yield."),
     ul(["Advanced creator tools would extend content management after the basic paid, subscription, and tip model exists.", "Additional wallet capabilities might include clearer portfolio views or more networks. No additional network is named.", "Rewards or staking are not a live program, have no published rate, and are not part of the creator payment model.", "Cross-chain interoperability beyond Ethereum and Base is not designed.", "Digital-asset tokenization is the subject of EraX Assets and remains future exploration.", "Ecosystem integrations with other products are not partnerships. None are announced."]),
   ]},
   { id: "conclusion", title: "16. Conclusion", blocks: [

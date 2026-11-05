@@ -4,7 +4,7 @@ const { spawnSync } = require("child_process");
 const lib = require("../docs/library");
 
 const root = path.join(__dirname, "..");
-const origin = "https://companysite-wheat.vercel.app";
+const origin = "https://erax-digital.vercel.app";
 const icon = "https://cdn.prod.website-files.com/6a05b20ea997c01d3bc68f2b/6a0f75d3489c98f0632507c8_Rectangle%2014%20(1).svg";
 const logo = "../assets/erax-logotype.svg";
 

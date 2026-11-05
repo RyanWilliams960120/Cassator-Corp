@@ -1,0 +1,11 @@
+const fs = require("fs");
+const html = fs.readFileSync("careers.html", "utf8");
+const i = html.indexOf("Product Manager (Social Network)");
+console.log(html.slice(i - 800, i + 900));
+console.log("\n\n==== INDEX ROADMAP ====");
+const home = fs.readFileSync("index.html", "utf8");
+const r = home.indexOf("Strategic Foundation");
+console.log(home.slice(r - 400, r + 500));
+console.log("\n\n==== VISION H2 ====");
+const v = home.indexOf(">Vision<");
+console.log(home.slice(v - 200, v + 200));

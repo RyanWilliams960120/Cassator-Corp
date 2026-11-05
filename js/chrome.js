@@ -11,7 +11,7 @@
       <div class="drop" id="sl8drop">
         <button class="drop-btn" aria-expanded="false" aria-controls="sl8menu">Ecosystem <i class="caret"></i></button>
         <div class="drop-menu" id="sl8menu">
-          <a href="sl8.html"><span>01</span> EraX Social</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/"><span>01</span> EraX Social</a>
           <a href="rwa.html"><span>02</span> EraX Assets</a>
           <a href="wallet.html"><span>03</span> EraX Wallet</a>
           <a href="paid-content.html"><span>04</span> EraX Creator</a>
@@ -25,12 +25,12 @@
       <a href="/whitepaper">Whitepaper</a>
     </nav>
     <div class="header-right">
-      <a class="btn-go" href="sl8.html">Ecosystem</a>
+      <a target="_blank" rel="noopener noreferrer" class="btn-go" href="https://erax-digital.vercel.app/">Ecosystem</a>
       <button class="burger" id="burger" aria-label="Open menu"><span></span></button>
     </div>
   </header>
   <div class="mobile-panel" id="mobile">
-    <a href="sl8.html">01 EraX Social</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/">01 EraX Social</a>
     <a href="rwa.html">02 EraX Assets</a>
     <a href="wallet.html">03 EraX Wallet</a>
     <a href="paid-content.html">04 EraX Creator</a>
@@ -41,7 +41,7 @@
     <a href="/documentation">Documentation</a>
     <a href="/whitepaper">Whitepaper</a>
     <a href="built-on-stellar.html">Technology</a>
-    <a href="sl8.html">Ecosystem</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/">Ecosystem</a>
   </div>`);
 
   window.renderFooter = function () {
@@ -54,14 +54,14 @@
           <a href="mailto:jobs@erax.digital">jobs@erax.digital</a>
         </div>
         <div class="stores">
-          <a href="sl8.html">EraX Social</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/">EraX Social</a>
           <a href="wallet.html">EraX Wallet</a>
           <a href="paid-content.html">EraX Creator</a>
         </div>
         <div class="foot-grid">
           <div>
             <h4>Ecosystem</h4>
-            <a href="sl8.html">EraX Social</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/">EraX Social</a>
             <a href="rwa.html">EraX Assets</a>
             <a href="wallet.html">EraX Wallet</a>
             <a href="paid-content.html">EraX Creator</a>
