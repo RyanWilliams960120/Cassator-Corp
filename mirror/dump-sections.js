@@ -1,39 +1,32 @@
 const fs = require("fs");
-const html = fs.readFileSync("index.html", "utf8");
 
-function textOf(chunk) {
-  return chunk
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, "\n")
+function textBetween(html, startNeedle, endNeedle, label) {
+  const a = html.indexOf(startNeedle);
+  const b = endNeedle ? html.indexOf(endNeedle, a + startNeedle.length) : a + 8000;
+  const chunk = html.slice(a, b > a ? b : a + 4000);
+  const text = chunk
+    .replace(/<script[\s\S]*?<\/script>/g, " ")
+    .replace(/<style[\s\S]*?<\/style>/g, " ")
+    .replace(/<br\s*\/?>/g, "\n")
+    .replace(/<\/(p|div|h1|h2|h3|h4|li|tr)>/g, "\n")
+    .replace(/<[^>]+>/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&nbsp;/g, " ")
-    .replace(/&#x27;/g, "'")
-    .replace(/&quot;/g, '"')
-    .split("\n")
-    .map((s) => s.replace(/\s+/g, " ").trim())
-    .filter((s) => s && s.length < 400 && !/^[A-Z0-9]{40,}$/.test(s));
+    .replace(/&gt;/g, ">")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/\n{2,}/g, "\n")
+    .replace(/[ ]{2,}/g, " ");
+  console.log("\n===== " + label + " =====\n" + text.slice(0, 3500));
 }
 
-const sections = [...html.matchAll(/<section[^>]*class="([^"]+)"/g)].map((m) => m[1]);
-console.log("SECTIONS", sections.join(" | "));
+const index = fs.readFileSync("index.html", "utf8");
+const team = index.indexOf('class="team');
+textBetween(index, 'class="team', 'class="footer', "HOME TEAM");
 
-const markers = [
-  "journey_text is--1",
-  'class="vision ',
-  "3 principles",
-  "principles that",
-  "Connect. Create",
-  "EraX Social",
-];
-for (const m of markers) {
-  console.log("\nMARK", m, html.indexOf(m));
-}
+const rwa = fs.readFileSync("rwa.html", "utf8");
+textBetween(rwa, 'class="distribution', 'class="how-it-works', "RWA DIST");
+textBetween(rwa, 'class="participation', 'class="principles_inner', "RWA PART");
 
-const j = html.indexOf('class="journey');
-const v = html.indexOf('class="vision ');
-const t = html.indexOf('class="team ');
-console.log("\n=== JOURNEY ===");
-console.log(textOf(html.slice(j, v)).join("\n"));
-console.log("\n=== VISION ===");
-console.log(textOf(html.slice(v, t)).join("\n"));
+const wallet = fs.readFileSync("wallet.html", "utf8");
+const earn = wallet.indexOf("Earn on");
+console.log("\n===== WALLET EARN =====\n" + wallet.slice(earn - 200, earn + 1800).replace(/<[^>]+>/g, " | ").replace(/\s+/g, " ").slice(0, 1600));

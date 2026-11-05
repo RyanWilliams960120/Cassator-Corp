@@ -13,7 +13,7 @@ function walk(dir, out) {
 let n = 0;
 for (const file of walk(root, [])) {
   const html = fs.readFileSync(file, "utf8");
-  const next = html.replaceAll("/css/erax-identity.css?v=14", "/css/erax-identity.css?v=15");
+  const next = html.replaceAll("/css/erax-identity.css?v=15", "/css/erax-identity.css?v=16");
   if (next !== html) {
     fs.writeFileSync(file, next);
     n += 1;
