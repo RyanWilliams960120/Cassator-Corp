@@ -22,6 +22,7 @@
       <a class="${active("trust-center.html")}" href="trust-center.html">Trust Center</a>
       <a href="/documentation">Documentation</a>
       <a href="/whitepaper">Whitepaper</a>
+      <a class="${active("tokenomics.html")}" href="/tokenomics">Tokenomics</a>
     </nav>
     <div class="header-right">
       <a target="_blank" rel="noopener noreferrer" class="btn-go" href="https://erax-digital.vercel.app/">Ecosystem</a>
@@ -38,6 +39,7 @@
     <a href="trust-center.html">Trust Center</a>
     <a href="/documentation">Documentation</a>
     <a href="/whitepaper">Whitepaper</a>
+    <a href="/tokenomics">Tokenomics</a>
     <a href="built-on-stellar.html">Technology</a>
     <a target="_blank" rel="noopener noreferrer" href="https://erax-digital.vercel.app/">Ecosystem</a>
   </div>`);
@@ -71,6 +73,7 @@
             <a href="careers.html">Careers</a>
             <a href="/documentation">Documentation</a>
             <a href="/whitepaper">Whitepaper</a>
+            <a href="/tokenomics">Tokenomics</a>
             <a href="built-on-stellar.html">Technology</a>
           </div>
           <div>
@@ -87,6 +90,7 @@
             <h4>Resources</h4>
             <a href="/documentation">Documentation</a>
             <a href="/whitepaper">Whitepaper</a>
+            <a href="/tokenomics">Tokenomics</a>
             <a href="trust-center.html">Trust Center</a>
             <a href="built-on-stellar.html">Technology</a>
             <div class="socials">

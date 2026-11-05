@@ -90,7 +90,7 @@ const pages = [
     h("Which networks are intended?"),
     p("Ethereum Mainnet is the primary network for ownership and settlement. Base is the intended Layer 2 for the ERAX token and for later creator payments. No contract address is published because the token contract is not deployed."),
     h("Is there a token?"),
-    p("The ERAX token is specified as an ERC-20 with a fixed supply of 1,000,000,000 tokens, 18 decimals, and a 0% transfer tax. It is not deployed, not audited, and not for sale. There is no published price, yield, or contract address. See Tokenomics."),
+    p("The ERAX token is specified as an ERC-20 with a fixed supply of 1,000,000,000 tokens, 18 decimals, and a 0% transfer tax. It is not deployed, not audited, and not for sale. There is no published price, yield, or contract address. The proposed allocation is at /tokenomics. The full FAQ is /docs/erax-tokenomics-faq.pdf."),
     h("Does the company custody assets?"),
     p("The wallet architecture is not verified as custodial or non-custodial. Until that design is implemented and documented from the product itself, this site does not claim either model."),
     h("Where can I read the longer document?"),
@@ -335,6 +335,7 @@ feature("monetization-architecture", "creator", "Creator Monetization Architectu
     p("Layer 1 is Ethereum, where settlement and the base security model live. Layer 2 is Base, where the application hopes to place frequent user transactions. Moving value between them is a bridge operation. No EraX bridge is offered."),
   ]],
   ["tokenomics", "Tokenomics", "The written ERAX token specification.", [
+    p("The proposed allocation is published at /tokenomics. The full FAQ is /docs/erax-tokenomics-faq.pdf. That allocation is an economic plan. It is not vesting code in the contract."),
     table(["Property", "Specification"], [
       ["Contract", "EraXToken"],
       ["Name", "EraX"],
@@ -662,7 +663,7 @@ const whitepaper = [
       ["2028", "Ecosystem growth", "Future development", "Broader tools. EraX Assets remains not operational."],
     ]),
     h("What each year is for"),
-    p("2026 covers the company's product vision, independent positioning, the Ethereum and Base direction, and the foundational architecture for accounts, data, and wallet connectivity. EraX Social is available for accounts, posts, follows, comments, bookmarks, communities, and messages. The ERAX token is a written ERC-20 with a fixed supply of 1,000,000,000, 18 decimals, and no transfer tax. It has no admin mint, burn, pause, or upgrade path. It is not deployed and it is not for sale."),
+    p("2026 covers the company's product vision, independent positioning, the Ethereum and Base direction, and the foundational architecture for accounts, data, and wallet connectivity. EraX Social is available for accounts, posts, follows, comments, bookmarks, communities, and messages. The ERAX token is a written ERC-20 with a fixed supply of 1,000,000,000, 18 decimals, and no transfer tax. It has no admin mint, burn, pause, or upgrade path. It is not deployed and it is not for sale. The proposed allocation is published at /tokenomics. The full FAQ is /docs/erax-tokenomics-faq.pdf. The allocation is an economic plan. It is not vesting code in the contract."),
     p("2027 is the intended year for the EraX Wallet experience and for EraX Creator: paid content, subscriptions, tips, and payment design on Base. It is also the year for security testing and preparation. It is not an announcement that a public beta has a date, and it is not a token sale."),
     p("2028 is future ecosystem work. It may include further creator and community tools, wallet capability, and interoperability. EraX Assets is not operational and is not an investment product. Rewards or staking are not a live program and have no published rate."),
   ]},
