@@ -1,0 +1,10 @@
+const fs = require("fs");
+const html = fs.readFileSync("index.html", "utf8");
+const i = html.indexOf('class="journey ');
+console.log(html.slice(i, i + 1500).replace(/></g, ">\n<").slice(0, 1600));
+console.log("\n--- icons ---");
+const icons = [...html.matchAll(/rel="(?:icon|apple-touch-icon|shortcut icon)"[^>]*>/g)].map(m => m[0]);
+console.log(icons.join("\n"));
+console.log("\n--- span svg ---");
+const s = html.indexOf('class="span-box"');
+console.log(html.slice(s, s + 700));

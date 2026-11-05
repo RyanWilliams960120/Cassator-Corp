@@ -126,71 +126,32 @@
     return { step: step };
   }
 
-  function mountEagle() {
+  function mountMark() {
     var bird = document.querySelector(".hero_bird");
-    if (!bird || bird.querySelector(".erax-eagle")) return null;
+    if (!bird || bird.querySelector(".erax-mark-wrap")) return null;
+    var wrap = document.createElement("div");
+    wrap.className = "erax-mark-wrap";
     var img = document.createElement("img");
-    img.className = "erax-eagle";
+    img.className = "erax-mark";
     img.alt = "";
-    img.src = "/assets/erax-eagle.png";
-    img.width = 1024;
-    img.height = 1024;
-    bird.appendChild(img);
-
-    var field = document.createElement("canvas");
-    field.className = "erax-eagle-field";
-    field.setAttribute("aria-hidden", "true");
-    bird.appendChild(field);
-    var ctx = field.getContext("2d");
-    var sparks = [];
-
-    function sizeField() {
-      var rect = bird.getBoundingClientRect();
-      var dpr = Math.min(window.devicePixelRatio || 1, 1.25);
-      field.width = Math.max(1, Math.floor(rect.width * dpr));
-      field.height = Math.max(1, Math.floor(rect.height * dpr));
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      sparks = [];
-      var count = rect.width < 480 ? 16 : 28;
-      for (var i = 0; i < count; i++) {
-        sparks.push({
-          x: Math.random(),
-          y: Math.random(),
-          s: Math.random() * 1.4 + 0.4,
-          p: Math.random() * Math.PI * 2
-        });
+    img.src = "/assets/erax-logo.svg";
+    img.width = 320;
+    img.height = 320;
+    if (!reduce) img.style.setProperty("animation", "erax-spin 42s linear infinite", "important");
+    wrap.appendChild(img);
+    bird.appendChild(wrap);
+    return {
+      draw: function () {
+        var ox = reduce ? 0 : (smooth.x - 0.5) * 16;
+        var oy = reduce ? 0 : (smooth.y - 0.5) * 10;
+        wrap.style.transform = "translate3d(" + ox.toFixed(2) + "px," + oy.toFixed(2) + "px,0)";
       }
-    }
-
-    function drawEagle() {
-      var rect = bird.getBoundingClientRect();
-      if (!rect.width) return;
-      ctx.clearRect(0, 0, rect.width, rect.height);
-      var ox = reduce ? 0 : (smooth.x - 0.5) * 14;
-      var oy = reduce ? 0 : (smooth.y - 0.5) * 10;
-      img.style.transform = "translate3d(" + ox.toFixed(2) + "px," + oy.toFixed(2) + "px,0)";
-      ctx.fillStyle = "rgba(243,230,204,0.8)";
-      for (var i = 0; i < sparks.length; i++) {
-        var spark = sparks[i];
-        if (!reduce) spark.p += 0.008;
-        var x = spark.x * rect.width + Math.cos(spark.p) * 6;
-        var y = spark.y * rect.height + Math.sin(spark.p) * 5;
-        ctx.globalAlpha = 0.35 + (Math.sin(spark.p) + 1) * 0.2;
-        ctx.beginPath();
-        ctx.arc(x, y, spark.s, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-    }
-
-    sizeField();
-    window.addEventListener("resize", sizeField);
-    return { draw: drawEagle };
+    };
   }
 
   function boot() {
     var space = mountSpace();
-    var eagle = mountEagle();
+    var eagle = mountMark();
     if (reduce) return;
     var running = true;
     document.addEventListener("visibilitychange", function () {
